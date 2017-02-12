@@ -1,0 +1,27 @@
+header.header
+  section.section.section__header
+    .container
+      .row
+        .col-md-12.col-sm-12.col-xs-12
+          h1.h1.header__title= title
+        .col-md-3.col-sm-3.col-xs-3
+          .header__logo
+            a.logo(href='index.html')
+              span.logo__name Клуб стоматологов
+              span.logo__url stomatologclub.ru
+        .col-md-3.col-sm-3.col-xs-3
+          .header__social
+            include social
+        .col-md-3.col-sm-6.col-xs-6.col-md-offset-3
+          .header__actions
+            ul.actions
+              li.actions__item
+                a.actions__link.btn.btn-success.btn-small.js-login-modal(href='#0')
+                  i.fa.fa-sign-in
+                  | Вход
+              li.actions__item
+                a.actions__link.btn.btn-primary.btn-small(href='#0')
+                  i.fa.fa-user
+                  | Регистрация
+  section.section.section__menu-main
+    include menu__main

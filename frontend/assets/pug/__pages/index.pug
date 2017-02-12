@@ -1,0 +1,106 @@
+extends ../base
+block vars
+  - var title = 'Профессиональный стоматологический портал (сайт) «Клуб стоматологов»'
+block main
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__main
+          .main-widget
+            h2.main-widget__title
+              a(href='#0') Галерея
+            hr
+            - var c = 0
+              while c < 2
+                - var n = 0
+                ul.thumbnails.clearfix
+                  while n < 3
+                    li.thumbnails__item
+                      .thumbnail__container
+                        a.thumbnail__link(href='#0')
+                          img.thumbnail__img(src='assets/img/g-1.jpg' alt='')
+                        h3.h3.thumbnails__title.text-nowrap
+                          a.thumbnail__link(href='#0') Видимо делал еще тот мастер стоматолог
+                        .thumbnails__comment
+                          i.fa.fa-comment
+                          | 5
+                    - n++
+                - c++
+            .main-widget__more.text-right
+              a.sidebar__link(href='#0')
+                | Смотреть все альбомы
+                i.fa.fa-level-up
+      .col-md-3.col-sm-4.col-xs-12
+        aside.aside.aside__main
+          .sidebar-widget
+            h2.h2.sidebar__title
+              a.sidebar__link(href='#0') Объявления
+            hr
+            ul.sidebar__list.sidebar__list-ads
+              - var n = 0
+              while n < 4
+                li.sidebar__item.text-center
+                  a.sidebar__link(href='#0')
+                    img.sidebar__img(src='assets/img/sidebar-image1.png' alt='')
+                  h3.h3.sidebar__title-second
+                    a.sidebar__link(href='#0') Аренда стоматологического кабинета м. Филевский парк
+                - n++
+            .sidebar__more.text-center
+              a.sidebar__link(href='#0')
+                | Смотреть все объявления
+                i.fa.fa-level-up
+          .sidebar-widget
+            h2.h2.sidebar__title
+              a.sidebar__link(href='#0') Вакансии
+            hr
+            ul.sidebar__list.sidebar__list-vacancy
+              - var n = 0
+              while n < 4
+                li.sidebar__item
+                  h3.h3.sidebar__title-second
+                    a.sidebar__link(href='#0') Врач-терапевт
+                  span.sidebar__salary
+                    | от 25 000
+                    i.fa.fa-rub
+                    | до 45 000
+                    i.fa.fa-rub
+                - n++
+            .sidebar__more.text-center
+              a.sidebar__link(href='#0')
+                | Смотреть все вакансии
+                i.fa.fa-level-up
+          .sidebar-widget
+            h2.h2.sidebar__title
+              a.sidebar__link(href='#0') Резюме
+            hr
+            ul.sidebar__list.sidebar__list-vacancy
+              - var n = 0
+              while n < 4
+                li.sidebar__item
+                  h3.h3.sidebar__title-second
+                    a.sidebar__link(href='#0') Врач-терапевт
+                  span.sidebar__salary з/п договорная
+                - n++
+            .sidebar__more.text-center
+              a.sidebar__link(href='#0')
+                | Смотреть все Резюме
+                i.fa.fa-level-up
+          .sidebar-widget
+            h2.h2.sidebar__title
+              a.sidebar__link(href='#0') Группы
+            hr
+            ul.sidebar__list.sidebar__list-vacancy
+              - var n = 0
+              while n < 4
+                - var n = 0
+                while n < 4
+                  li.sidebar__item.text-center
+                    a.sidebar__link(href='#0')
+                      img.sidebar__img(src='assets/img/group-logo.png' alt='')
+                    h3.h3.sidebar__title-second.text-nowrap
+                      a.sidebar__link(href='#0') Управляющие стоматологическим бизнесом
+                  - n++
+            .sidebar__more.text-center
+              a.sidebar__link(href='#0')
+                | Смотреть все группы
+                i.fa.fa-level-up

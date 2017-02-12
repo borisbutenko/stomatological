@@ -1,0 +1,44 @@
+@media (max-width: 1200px)
+  .thumbnails > .thumbnails__item
+    width: 32.25%
+
+@media (max-width: 992px)
+  .menu-main__item-divider-vertical
+    display: none !important
+
+  .thumbnails > .thumbnails__item
+    width: 48.5%
+    &:last-child
+      margin-right: 0
+    &:nth-child(n+2)
+      margin-right: 0
+
+  .header__title
+    display: none
+
+  .social
+    display: none
+
+@media (max-width: 768px)
+  .section__footer
+    display: none
+
+  .copyright
+    text-align: center !important
+    margin: -2rem 0
+
+@media (max-width: 500px)
+  .thumbnails > .thumbnails__item
+    width: 100%
+    margin-right: 0 !important
+  .thumbnail__link
+    width: 100%
+    text-align: center
+    display: block
+
+  .actions
+    text-align: right
+    &__item
+      margin-bottom: 1rem
+      &:last-child
+        margin-bottom: 0

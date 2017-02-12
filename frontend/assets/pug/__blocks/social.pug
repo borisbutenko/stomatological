@@ -1,0 +1,7 @@
+- var social = [{url : '#0', cl : 'fa-facebook-official'}, {url : '#0', cl : 'fa-vk'}, {url : '#0', cl : 'fa-odnoklassniki-square'}, {url : '#0', cl : 'fa-instagram'}]
+
+ul.social
+  each item in social
+    li.social__item
+      a.social__link(href=item.url)
+        i.fa.fa-fw(class=item.cl)

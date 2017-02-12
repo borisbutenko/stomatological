@@ -1,0 +1,20 @@
+footer.footer
+  .container
+    .row
+      .col-md-9.col-sm-9.col-xs-12
+        section.section.section__footer.clearfix
+          - var c = 0
+            while c < 4
+              .col-md-3.col-sm-3.col-xs-12
+                .footer__container
+                  h3.h3.footer__title Разделы
+                  ul.footer__list.clearfix
+                    - var n = 0
+                      while n < 8
+                        li.footer__item
+                          a.footer__link(href='#0') Раздел
+                        - n++
+              - c++
+      .col-md-3.col-sm-3.col-xs-12
+        aside.aside.aside__footer
+          p.copyright.text-right.text-italic © 2010 — 2017<br>«Клуб стоматологов»<br>16+
