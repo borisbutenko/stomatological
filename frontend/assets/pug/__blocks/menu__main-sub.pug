@@ -1,0 +1,15 @@
+nav.navbar.navbar-default.menu-sub.js-menu-sub
+  .container
+    #menu-sub
+      ul.nav.navbar-nav.menu-sub__list
+        - var length = submenu.length
+        - var last = 1
+        each item in submenu
+          if length == last
+            li.menu-sub__item
+              a.menu-sub__link(href=item.url)= item.name
+          else
+            li.menu-sub__item
+              a.menu-sub__link(href=item.url)= item.name
+            li.menu-sub__item-divider-vertical
+          - last++

@@ -1,0 +1,90 @@
+extends ../base
+block vars
+  - var title = 'Работа для стоматологов (врач стоматолог, терапевт, ортопед)'
+block main
+  - var submenu = [{name : 'вакансии', url : 'index.html'}, {name : 'резюме', url : '#0'}]
+  include ../__blocks/menu__main-sub
+  .container
+    .row
+      .col-md-12.col-sm-12.col-xs-12
+        +breadcrumbs([
+            {
+                name: 'Главная',
+                url: 'index.html'
+            },
+            {
+                name: 'Работа для стоматологов',
+                url: null
+            }])
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__job
+          h2.h2.section__title Работа для стоматологов
+          .main-widget.vacancy
+            .clearfix
+              h2.h2.main-widget__title.pull-left
+                a(href='#0') Вакансии
+              a.btn.btn-primary.section__job__link.pull-right(href='#0')
+                i.fa.fa-plus
+                | Добавить вакансию
+            hr
+            - var n = 0
+            ul.vacancy.clearfix
+              while n < 5
+                li.vacancy__item
+                  .vacancy__row.clearfix
+                    h3.h3.vacancy__title.pull-left
+                      a(href='#0') Администратор в стоматологию
+                    span.vacancy__salary.pull-right
+                      | от 25 000
+                      i.fa.fa-rub
+                      | до 55 000
+                      i.fa.fa-rub
+                  .vacancy__row.clearfix
+                    p.vacancy__company Диамант
+                  .vacancy__row.clearfix
+                    span.vacancy__location.pull-left
+                      i.fa.fa-globe
+                      | Санкт-Петербург
+                    span.vacancy__date.pull-right
+                      i.fa.fa-clock-o
+                      | 11 февраля 2017
+                hr
+                - n++
+            .main-widget__more.text-right
+              a.sidebar__link(href='#0')
+                | Смотреть все вакансии
+                i.fa.fa-level-up
+        section.section.section__job
+          .main-widget.vacancy
+            .clearfix
+              h2.h2.main-widget__title.pull-left
+                a(href='#0') Резюме
+              a.btn.btn-primary.section__job__link.pull-right(href='#0')
+                i.fa.fa-plus
+                | Добавить резюме
+            hr
+            - var n = 0
+            ul.vacancy.clearfix
+              while n < 5
+                li.vacancy__item
+                  .vacancy__row.clearfix
+                    h3.h3.vacancy__title.pull-left
+                      a(href='#0') Гигиенист стоматологический
+                    span.vacancy__salary.pull-right з/п договорная
+                  .vacancy__row.clearfix
+                    p.vacancy__company Шехроз Разиков
+                  .vacancy__row.clearfix
+                    span.vacancy__location.pull-left
+                      i.fa.fa-globe
+                      | Иваново
+                    span.vacancy__date.pull-right
+                      i.fa.fa-clock-o
+                      | 29 августа 2016
+                hr
+                - n++
+            .main-widget__more.text-right
+              a.sidebar__link(href='#0')
+                | Смотреть все резюме
+                i.fa.fa-level-up
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/job__aside

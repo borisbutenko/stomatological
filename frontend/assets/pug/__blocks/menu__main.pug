@@ -10,7 +10,14 @@ nav.navbar.navbar-default.menu-main.js-main-menu
           span.icon-bar
       #menu-main.collapse.navbar-collapse
         ul.nav.navbar-nav.menu-main__list
+          - var length = menu.length
+          - var last = 1
           each item in menu
-            li.menu-main__item
-              a.menu-main__link(href=item.url)= item.name
-            li.menu-main__item-divider-vertical
+            if length == last
+              li.menu-main__item
+                a.menu-main__link(href=item.url)= item.name
+            else
+              li.menu-main__item
+                a.menu-main__link(href=item.url)= item.name
+              li.menu-main__item-divider-vertical
+            - last++

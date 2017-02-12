@@ -1,1 +1,13 @@
-
+mixin breadcrumbs(breadcrumbs)
+  - var length = breadcrumbs.length
+  - var last = 1
+  ul.breadcrumb.text-italic
+    each item in breadcrumbs
+      if length == last
+        li.breadcrumb__item.active
+          span.breadcrumb__text= item.name
+      else
+        li.breadcrumb__item
+          a.breadcrumb__link(href=item.url)= item.name
+          span.breadcrumb__divider
+      - last++

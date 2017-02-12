@@ -9,9 +9,11 @@ html(lang='ru')
     include __assets/styles
     include __assets/scripts
   body
+    include mixins
     .wrapper
       block vars
       include __blocks/header
       main.main
         block main
     include __blocks/footer
+    include __blocks/modals

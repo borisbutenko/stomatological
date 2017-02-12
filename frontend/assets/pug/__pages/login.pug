@@ -1,0 +1,44 @@
+extends ../base
+block vars
+  - var title = 'Профессиональный стоматологический портал (сайт) «Клуб стоматологов»'
+block main
+  .container
+    .row
+      .col-md-12.col-sm-12.col-xs-12
+        +breadcrumbs([
+          {
+            name  : 'Главная',
+            url   : 'index.html'
+          },
+          {
+            name: 'Вход',
+            url: null
+          }])
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__login
+          h2.h2.section__title Вход
+          .main-widget
+            form.form.form__login
+              .row
+                .form__group.clearfix
+                  .col-md-12
+                    label.label.label.form__login__label(for='login') Логин или E-mail:
+                    input#login.input(type='text' name='login')
+                .form__group.clearfix
+                  .col-md-12
+                    label.label.form__login__label(for='password') Пароль:
+                    input#password.input(type='password' name='password')
+                .form__group.clearfix
+                  .col-md-10.col-md-offset-2.col-sm-8.col-sm-offset-4.col-xs-12
+                    a.form__login__link(href='recovery-password.html') Забыли пароль?
+                    span.form__login__link-divider |
+                    a.form__login__link(href='registration.html') Регистрация
+                .form__group.clearfix
+                  .col-md-10.col-md-offset-2.col-sm-8.col-sm-offset-4.col-xs-12
+                    label.label.label-checkbox.form__login__label-checkbox
+                      input.input-checkbox(type='checkbox' name='remember')
+                      | Запомнить меня
+                .col-md-10.col-md-offset-2.col-sm-8.col-sm-offset-4.col-xs-12
+                  button.btn.btn-primary(type='submit') Войти
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/main__aside

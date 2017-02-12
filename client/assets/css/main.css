@@ -24,12 +24,43 @@
   }
 }
 @media (max-width: 768px) {
+  .menu-sub__item {
+    display: inline-block !important;
+    border-right: 0.1rem solid #37c6d6;
+  }
+  .menu-sub__item:last-child {
+    border-right: none;
+  }
+  .menu-sub__item-divider-vertical {
+    display: none !important;
+  }
   .section__footer {
     display: none;
   }
   .copyright {
     text-align: center !important;
     margin: -2rem 0;
+  }
+  .form__group {
+    text-align: center;
+  }
+  .form__group label.label {
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+  }
+  .form__group label.label-checkbox {
+    text-align: center;
+  }
+  .form__group input.input {
+    width: 100%;
+  }
+  .form__group input.input-checkbox {
+    float: unset !important;
+    top: 0.2rem !important;
+  }
+  .form button.btn {
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
@@ -9194,6 +9225,7 @@ html {
 }
 body {
   background-color: #eee;
+  font-size: 1.4rem;
 }
 h1.h1,
 h2.h2,
@@ -9221,6 +9253,20 @@ img {
 .section__header {
   padding: 1.5rem 0 2rem;
 }
+.section__title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  padding: 0.5rem 0 3rem;
+}
+.section__registration {
+  padding: 5rem 0;
+}
+.section__job__link:hover {
+  text-decoration: none !important;
+}
+.section__job .main-widget__more {
+  margin-top: 0;
+}
 .text-center {
   text-align: center;
 }
@@ -9235,6 +9281,39 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: left;
+}
+.breadcrumb__divider,
+.breadcrumb__text {
+  color: #aaa;
+}
+.label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 400;
+}
+.label-checkbox {
+  padding: 0;
+  margin: 0;
+}
+.input {
+  display: inline-block;
+  margin-bottom: 0;
+  background-color: #fff;
+  border: 0.1rem solid #ccc;
+  box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,0.075);
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  height: 3rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border-radius: 0.4rem;
+}
+.input:focus {
+  border-color: rgba(82,168,236,0.8);
+  outline: 0;
+  box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,0.075), 0 0 0.1rem rgba(82,168,236,0.6);
 }
 .logo {
   height: 3.9rem;
@@ -9303,6 +9382,26 @@ img {
 .menu-main__link:hover {
   color: #fff;
 }
+.menu-sub {
+  background-color: #04b8ca;
+  box-shadow: none;
+  margin-top: -2rem;
+  border: none;
+  border-radius: 0;
+}
+.menu-sub__item-divider-vertical {
+  height: 5rem;
+  border-left: 1px solid #37c6d6;
+}
+.menu-sub__link {
+  text-shadow: 0 0.1rem 0 #496174;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #d8fbfd;
+}
+.menu-sub__link:hover {
+  color: #fff;
+}
 .sidebar-widget {
   background-color: #fff;
   padding: 2rem;
@@ -9345,6 +9444,9 @@ img {
 .sidebar__salary i {
   margin: 0 0.5rem;
 }
+.sidebar__text {
+  color: #aaa;
+}
 .main-widget {
   background-color: #fff;
   padding: 4rem;
@@ -9371,7 +9473,7 @@ img {
   background: #fff;
   padding: 1rem;
   border: 0.1rem solid #eee;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 0.1rem 2px rgba(0,0,0,0.1);
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
@@ -9393,6 +9495,72 @@ img {
 .thumbnails__comment i {
   margin-right: 0.5rem;
 }
+.form__group {
+  margin-left: -0.3rem;
+  margin-bottom: 1.5rem;
+}
+.form__login input.input-checkbox {
+  float: left;
+  margin-right: 0.5rem;
+  position: relative;
+  top: -0.3rem;
+}
+.form__login__label {
+  width: 14rem;
+  padding-top: 0.5rem;
+  text-align: right;
+}
+.form__login__label-checkbox {
+  margin-left: 0.3rem;
+}
+.form__login__link {
+  margin-left: 0.3rem;
+}
+.form__login__link-divider {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+#modal-login .form__login__label-checkbox,
+#modal-login .form__login__link:first-of-type {
+  margin-left: -0.5rem;
+}
+.vacancy__row {
+  margin-bottom: 1rem;
+}
+.vacancy h2.main-widget__title {
+  padding: 0;
+}
+.vacancy i {
+  margin-right: 0.5rem;
+}
+.vacancy__title {
+  font-size: 1.8rem;
+}
+.vacancy__salary {
+  font-size: 1.6rem;
+  color: #04b8ca;
+  font-weight: 600;
+}
+.vacancy__salary i {
+  margin: 0 0.5rem;
+}
+.vacancy__company {
+  font-weight: bold;
+  margin: 0;
+}
+.aside__job .sidebar-widget .sidebar__item {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.aside__job .sidebar-widget .sidebar__link {
+  display: block;
+  padding: 0.5rem 0;
+}
+.aside__job .sidebar-widget .sidebar__link:hover {
+  text-decoration: none;
+  background-color: #eee;
+}
 .header__title {
   padding-bottom: 1.5rem;
   font-size: 1.1rem;
@@ -9400,6 +9568,7 @@ img {
   text-shadow: 0 1px 0 #fff;
 }
 .footer {
+  margin-top: 1rem;
   background-color: #3f5464;
   padding: 3rem 0;
 }
@@ -9428,4 +9597,50 @@ img {
 .copyright {
   font-size: 1.4rem;
   color: #fff;
+}
+#registration {
+  height: 100%;
+  background-color: #16212a;
+  background-image: -o-radial-gradient(circle, #3f5464, #16212a);
+  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+}
+#registration .registration {
+  min-height: 100%;
+  color: #fff;
+  background: url("../img/user-register-bg.png") center top;
+}
+#registration .registration hr {
+  border-color: #43535e;
+}
+#registration .registration__title {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 300;
+}
+#registration .registration label.label {
+  font-size: 1.8rem;
+  display: block;
+  text-align: left;
+  color: #fff;
+  padding-left: 0;
+}
+#registration .registration input.input {
+  height: 4rem;
+  margin-bottom: 1rem;
+  color: #555;
+  display: block;
+  width: 100%;
+}
+#registration .registration__help {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  color: #afbcc5;
+  font-size: 1.2rem;
+}
+#registration .registration button.btn {
+  line-height: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }

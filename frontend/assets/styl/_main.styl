@@ -8,6 +8,7 @@ html
 
 body
   background-color: #eee
+  font-size: 1.4rem
 
 h1.h1,
 h2.h2,
@@ -34,6 +35,18 @@ img
 .section
   &__header
     padding: 1.5rem 0 2rem
+  &__title
+    font-size: 3.5rem
+    font-weight: 300
+    padding: .5rem 0 3rem
+  &__registration
+    padding: 5rem 0
+  &__job
+    &__link
+      &:hover
+        text-decoration: none !important
+    & .main-widget__more
+      margin-top: 0
 
 .text
   &-center
@@ -47,3 +60,37 @@ img
     text-overflow: ellipsis
     white-space: nowrap
     text-align: left
+
+.breadcrumb
+  &__divider,
+  &__text
+    color: #aaa
+
+.label
+  cursor: pointer
+  display: inline-block
+  font-size: 1.4rem
+  color: #555
+  font-weight: 400
+  &-checkbox
+    padding: 0
+    margin: 0
+
+.input
+  display: inline-block
+  margin-bottom: 0
+  background-color: #fff
+  border: .1rem solid #ccc
+  box-shadow: inset 0 .1rem .1rem rgba(0,0,0,0.075)
+  transition: border linear .2s,
+              box-shadow linear .2s
+  height: 3rem
+  padding: .4rem .6rem
+  font-size: 1.4rem
+  line-height: 2rem
+  border-radius: .4rem
+  &:focus
+    border-color: rgba(82,168,236,0.8)
+    outline: 0
+    box-shadow: inset 0 .1rem .1rem rgba(0,0,0,.075),
+                0 0 .1rem rgba(82,168,236,.6)
