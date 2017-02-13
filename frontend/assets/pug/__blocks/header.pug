@@ -7,6 +7,8 @@ header.header
         .col-md-6.col-sm-6.col-xs-6
           .header__social.pull-right
             include social
+          .header__switcher
+            a.header__switcher__link.js-switcher-modal(href='#0' data-toggle='modal' data-target='#modal-switcher')
         .col-md-6.col-sm-6.col-xs-6
           .header__logo
             a.logo(href='index.html')
@@ -20,7 +22,7 @@ header.header
                   i.fa.fa-sign-in
                   | Вход
               li.actions__item
-                a.actions__link.btn.btn-primary.btn-small.js-reg-modal(href='#0' data-toggle='modal' data-target='#modal-reg')
+                a.actions__link.btn.btn-primary.btn-small.js-reg-modal(href='#0' data-toggle='modal' data-target='#modal-login')
                   i.fa.fa-user
                   | Регистрация
   section.section.section__menu-main
