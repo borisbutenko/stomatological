@@ -1,0 +1,29 @@
+aside.aside.aside__job
+  .search
+    input.input.input-search(type='text' name='name' placeholder='Search..')
+    button.button.button-search(type='button')
+      i.fa.fa-search
+  .sidebar-widget
+    h2.h2.sidebar__title
+      span.sidebar__text(href='#0')
+        i.fa.fa-folder-open
+        | Вакансии
+    hr
+    ul.sidebar__list.sidebar__list-ads
+      - var n = 0
+      while n < 15
+        li.sidebar__item
+          a.sidebar__link(href='#0') Ассистент стоматолога
+        - n++
+  .sidebar-widget
+    h2.h2.sidebar__title
+      span.sidebar__text(href='#0')
+        i.fa.fa-folder-open
+        | Резюме
+    hr
+    ul.sidebar__list.sidebar__list-ads
+      - var n = 0
+      while n < 15
+        li.sidebar__item
+          a.sidebar__link(href='#0') Врач-имплантолог
+        - n++

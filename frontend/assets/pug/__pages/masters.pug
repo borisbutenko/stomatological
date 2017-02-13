@@ -2,8 +2,6 @@ extends ../base
 block vars
   - var title = 'Специалисты в стоматологии'
 block main
-  - var submenu = [{name : 'правила', url : '#0'}]
-  include ../__blocks/menu__main-sub
   +breadcrumbs([
       {
           name: 'Главная',

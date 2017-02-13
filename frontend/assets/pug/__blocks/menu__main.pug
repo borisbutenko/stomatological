@@ -1,4 +1,4 @@
-- var menu = [{name : 'главная', url : 'index.html'}, {name : 'работа', url : 'job.html'}, {name : 'объявления', url : 'ads.html'}, {name : 'специалисты', url : 'masters.html'}, {name : 'лаборатории', url : '#0'}, {name : 'галерея', url : '#0'}, {name : 'группы', url : 'group.html'}]
+- var menu = [{name : 'главная', url : 'index.html', sub: null}, {name : 'работа', url : 'job.html', sub: null}, {name : 'объявления', url : 'ads.html', sub: null}, {name : 'специалисты', url : 'masters.html', sub: null}, {name : 'лаборатории', url : 'labs.html', sub: null}, {name : 'еще', url : '#0', sub: [{name : 'галерея', url : 'gallery.html'}, {name : 'группы', url : 'group.html'}]}]
 
 nav.navbar.navbar-default.menu-main.js-main-menu
   .container
@@ -13,11 +13,28 @@ nav.navbar.navbar-default.menu-main.js-main-menu
           - var length = menu.length
           - var last = 1
           each item in menu
-            if length == last
-              li.menu-main__item
-                a.menu-main__link(href=item.url)= item.name
+            if ( !item.sub )
+              if length == last
+                li.menu-main__item
+                  a.menu-main__link(href=item.url)= item.name
+              else
+                li.menu-main__item
+                  a.menu-main__link(href=item.url)= item.name
+                li.menu-main__item-divider-vertical
             else
-              li.menu-main__item
-                a.menu-main__link(href=item.url)= item.name
-              li.menu-main__item-divider-vertical
+              if length == last
+                li.menu-main__item.menu-main__item-dropdown.dropdown
+                  a.menu-main__link.menu-main__link-dropdown(href=item.url data-toggle='dropdown')= item.name
+                  ul.menu-main__list-dropdown.dropdown-menu
+                    each sub in item.sub
+                      li
+                        a.menu-main__link.menu-main__link-sub(href=sub.url)= sub.name
+              else
+                li.menu-main__item.menu-main__item-dropdown.dropdown
+                  a.menu-main__link.menu-main__link-dropdown(href=item.url data-toggle='dropdown')= item.name
+                  ul.menu-main__list-dropdown.dropdown-menu
+                    each sub in item.sub
+                      li
+                        a.menu-main__link.menu-main__link-sub(href=sub.url)= sub.name
+                li.menu-main__item-divider-vertical
             - last++

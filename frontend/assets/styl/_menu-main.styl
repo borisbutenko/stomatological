@@ -3,6 +3,7 @@
   box-shadow: 0 .1rem .4rem rgba(0,0,0,0.065)
   border: none
   border-radius: 0
+  margin-bottom: 0
   &__item
     &-divider-vertical
       height: 5rem
@@ -25,3 +26,22 @@
     text-shadow: 0 .1rem 0 #496174
     &:hover
       color: #fff
+    &-sub
+      padding: .5rem 2rem !important
+      font-size: 1.5rem
+      color: #455f68
+      font-weight: 500
+      border-bottom: .3rem solid transparent
+      &:hover
+        background: transparent
+        color: #00acdb
+        text-decoration: underline
+      &::before
+        display: inline-block
+        content: ''
+        position: relative
+        left: -1rem
+        width: .6rem
+        height: .6rem
+        border-radius: 50%
+        background: #00acdb

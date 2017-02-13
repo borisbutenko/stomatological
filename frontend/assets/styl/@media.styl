@@ -26,6 +26,21 @@
     clear: none !important
 
 @media (max-width: 768px)
+  #menu-main [data-toggle=dropdown]
+    & + .dropdown-menu
+      opacity: 1 !important
+      transition: all .5s !important
+    &:hover + .dropdown-menu
+      display: none !important
+      opacity: 1 !important
+
+  #menu-main
+    & .dropdown-menu:hover
+      display: block
+      opacity: 1
+    & .dropdown.open > ul.dropdown-menu
+      display: block !important
+
   .menu-sub
     &__item
       display: inline-block !important
