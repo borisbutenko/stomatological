@@ -2,17 +2,17 @@ header.header
   section.section.section__header
     .container
       .row
-        .col-md-12.col-sm-12.col-xs-12
+        .col-md-6.col-sm-6.col-xs-6
           h1.h1.header__title= title
-        .col-md-3.col-sm-3.col-xs-3
+        .col-md-6.col-sm-6.col-xs-6
+          .header__social.pull-right
+            include social
+        .col-md-6.col-sm-6.col-xs-6
           .header__logo
             a.logo(href='index.html')
               span.logo__name Клуб стоматологов
               span.logo__url stomatologclub.ru
-        .col-md-3.col-sm-3.col-xs-3
-          .header__social
-            include social
-        .col-md-3.col-sm-6.col-xs-6.col-md-offset-3
+        .col-md-6.col-sm-6.col-xs-6
           .header__actions
             ul.actions
               li.actions__item

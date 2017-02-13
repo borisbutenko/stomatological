@@ -2,20 +2,19 @@ extends ../base
 block vars
   - var title = 'Работа для стоматологов (врач стоматолог, терапевт, ортопед)'
 block main
-  - var submenu = [{name : 'вакансии', url : 'index.html'}, {name : 'резюме', url : '#0'}]
+  - var submenu = [{name : 'вакансии', url : '#0'}, {name : 'резюме', url : '#0'}]
   include ../__blocks/menu__main-sub
+  +breadcrumbs([
+    {
+        name: 'Главная',
+        url: 'index.html'
+    },
+    {
+        name: 'Работа для стоматологов',
+        url: null
+    }])
   .container
     .row
-      .col-md-12.col-sm-12.col-xs-12
-        +breadcrumbs([
-            {
-                name: 'Главная',
-                url: 'index.html'
-            },
-            {
-                name: 'Работа для стоматологов',
-                url: null
-            }])
       .col-md-9.col-sm-8.col-xs-12
         section.section.section__job
           h2.h2.section__title Работа для стоматологов

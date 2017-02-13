@@ -10,6 +10,11 @@
             $(this).addClass('active');
         });
 
+        $('.js-menu-sub').on('click', '.menu-sub__link', function() {
+            $('.menu-sub__link').removeClass('active');
+            $(this).addClass('active');
+        });
+
         /**
          *  Menu links active on load page
          */

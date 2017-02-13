@@ -1,0 +1,104 @@
+extends ../base
+block vars
+  - var title = 'Доска объявлений (объявления по стоматологии)'
+block main
+  - var submenu = [{name : 'правила', url : '#0'}]
+  include ../__blocks/menu__main-sub
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Доска объявлений',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__job
+          .main-widget.vacancy.ads
+            .clearfix
+              h2.h2.main-widget__title.pull-left
+                span Доска объявлений
+              a.btn.btn-primary.section__job__link.pull-right(href='#0')
+                i.fa.fa-plus
+                | Разместить объявление
+            hr
+            .ads__search.clearfix
+              .col-md-4.col-sm-12.col-xs-12
+                label.label(for='category') Рубрика
+                select#category.input.select(name='category')
+                  - var n = 1
+                    option(selected) Не важно
+                    while n < 8
+                      - var option = 'Рубрика-' + n++
+                      option= option
+              .col-md-4.col-sm-12.col-xs-12
+                label.label(for='county') Страна
+                select#county.input.select(name='county')
+                  - var n = 1
+                  option(selected) Выберите страну
+                  while n < 10
+                    - var option = 'Страна-' + n++
+                    option= option
+              .col-md-4.col-sm-12.col-xs-12
+                label.label(for='city') Город
+                select#city.input.select(name='city')
+                  - var n = 1
+                  option(selected) Выберите город
+                  while n < 20
+                    - var option = 'Город-' + n++
+                    option= option
+              .col-md-12.col-sm-12.col-xs-12.pull-right
+                a.btn.btn-primary.section__job__link.pull-right(href='#0')
+                  i.fa.fa-search
+                  | Найти объявление
+        section.section.section__job
+          .main-widget.vacancy.ads-container
+            .clearfix
+              - var n = 0
+              ul.ads-result.clearfix
+                while n < 10
+                  li.ads-result__item.clearfix
+                    .ads-result__row.clearfix
+                      .col-md-2.col-sm-4.col-xs-12
+                        a.ads-result__image(href='#0')
+                          img(src='assets/img/g-1.jpg' alt='')
+                      .col-md-7.col-sm-8.col-xs-12
+                        h2.h2.ads-result__title
+                          a(href='#0') Ортопантомограф Sirona Orthophos xg3
+                        a.ads-result__link.text-italic(href='#0')
+                          i.fa.fa-folder-open
+                          | Аренда кресла, кабинета
+                        p.ads-result__location
+                          i.fa.fa-globe
+                          | Москва
+                      .col-md-3.col-sm-12.col-xs-12
+                        p.ads-result__price.pull-right
+                          | 30 000
+                          i.fa.fa-rub
+                        p.ads-result__date.pull-right
+                          i.fa.fa-clock-o
+                          | 9 января 2017
+                  hr
+                  - n++
+            ul.pagination
+              li
+                a.first(href='#0')
+                  i.fa.fa-angle-left
+              li
+                a.active 1
+              li
+                a(href='#0') 2
+              li
+                a(href='#0') 3
+              li
+                a(href='#0') 4
+              li
+                a(href='#0') 5
+              li
+                a.last(href='#0')
+                  i.fa.fa-angle-right
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/ads__aside

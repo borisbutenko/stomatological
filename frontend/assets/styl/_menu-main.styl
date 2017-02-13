@@ -1,15 +1,22 @@
 .menu-main
-  background-color: #3f5464
+  background-color: #fff
   box-shadow: 0 .1rem .4rem rgba(0,0,0,0.065)
   border: none
   border-radius: 0
   &__item
     &-divider-vertical
       height: 5rem
-      border-left: .1rem solid #496174
+      border-left: .1rem solid #f1f8f9
+    & > a
+      text-transform: uppercase
+      border-top: .4rem solid transparent
+      border-bottom: .4rem solid transparent
+      &:hover
+        background: #00acdb
     &.active > a
-        color: #fff !important
-        background-color: #04b8ca !important
+      color: #555 !important
+      background-color: #fff !important
+      border-bottom-color: #00acdb
   &__link
     text-transform: capitalize
     font-size: 1.4rem
