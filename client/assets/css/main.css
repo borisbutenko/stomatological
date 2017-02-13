@@ -9279,6 +9279,9 @@ img {
 .section__masters .ads-result__row {
   margin-bottom: 0;
 }
+.section__group .ads-result__title {
+  padding-bottom: 2rem;
+}
 .aside .search {
   margin-bottom: 3rem;
 }
@@ -9583,6 +9586,24 @@ ul.pagination a.last > i {
 .sidebar__text {
   color: #aaa;
 }
+.sidebar__list-group {
+  text-align: center;
+}
+.sidebar__list-group .sidebar__item {
+  display: inline-block;
+}
+.sidebar__list-group .sidebar__item a {
+  color: #4c7284;
+  border: 0.1rem solid #e4edee;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 2rem;
+  margin: 0.5rem 0.4rem;
+}
+.sidebar__list-group .sidebar__item a::before {
+  content: '';
+  margin-right: 0;
+}
 .main-widget {
   background-color: #fff;
   padding: 4rem;
@@ -9725,6 +9746,10 @@ ul.pagination a.last > i {
 }
 .ads__search > div:last-of-type {
   margin: 2rem 0;
+}
+.ads-result hr:last-of-type {
+  border: none;
+  margin: 0;
 }
 .ads-result__row {
   margin-bottom: 2rem;

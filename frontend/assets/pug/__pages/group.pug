@@ -1,0 +1,37 @@
+extends ../base
+block vars
+  - var title = 'Группы по стоматологии'
+block main
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Группы по стоматологии',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__group
+          h2.h2.section__title Группы по стоматологии
+          .main-widget.vacancy.masters
+            - var n = 0
+            ul.ads-result.clearfix
+              while n < 7
+                li.ads-result__item.clearfix
+                  .ads-result__row.clearfix
+                    .col-md-2.col-sm-4.col-xs-4
+                      a.ads-result__image(href='#0')
+                        img(src='assets/img/group-logo.png' alt='')
+                    .col-md-10.col-sm-8.col-xs-8
+                      h2.h2.ads-result__title
+                        a(href='#0') Управляющие стом. бизнесом
+                      p.ads-result__location
+                        i.fa.fa-group
+                        | 39 участников
+                hr
+                - n++
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/group__aside
