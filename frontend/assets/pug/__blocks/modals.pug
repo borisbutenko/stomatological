@@ -20,7 +20,7 @@
               col-md-9.col-md-offset-3.col-sm-9.col-sm-offset-3.col-xs-12
                 a.form__login__link(href='recovery-password.html') Забыли пароль?
                 span.form__login__link-divider |
-                a.form__login__link(href='registration.html') Регистрация
+                a.form__login__link(href='#0' data-dismiss='modal' data-toggle='modal' data-target='#modal-reg') Регистрация
             .form__group.clearfix
               .col-md-9.col-md-offset-3.col-sm-9.col-sm-offset-3.col-xs-12
                 label.label.label-checkbox.form__login__label-checkbox
@@ -28,4 +28,36 @@
                   | Запомнить меня
         .modal-footer
           a.btn.btn-default(href='#0' data-dismiss='modal') Отмена
-          a.btn.btn-primary(href='#0') Вход
+          a.btn.btn-primary(href='#0' data-dismiss='modal') Вход
+
+#modal-reg.modal.fade(tabindex='-1' role='dialog' aria-labelledby='form-reg')
+  .modal-dialog(role='document')
+    .modal-content
+      form.form.form__registration
+        .modal-header
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+          h4.modal-title Регистрация
+        .modal-body
+          .row
+            .form__group.clearfix
+              .col-md-12
+                label.label(for='login-reg') Логин:
+                input#login-reg.input(type='text' name='login')
+                p.registration__help Может состоять только из букв (A-Z a-z), цифр (0-9). Знак подчеркивания (_) лучше не использовать. Длина логина не может быть меньше 3 и больше 30 символов.
+            .form__group.clearfix
+              .col-md-12
+                label.label(for='mail-reg') E-mail:
+                input#mail-reg.input(type='email' name='mail' required)
+                p.registration__help Для проверки регистрации и в целях безопасности нам нужен адрес вашей электронной почты.
+            .form__group.clearfix
+              .col-md-12
+                label.label(for='password-reg') Пароль:
+                input#password-reg.input(type='password' name='password' required)
+            .form__group.clearfix
+              .col-md-12
+                label.label(for='password-reg-re') Повторите пароль:
+                input#password-reg-re.input(type='password' name='password' required)
+        .modal-footer
+          a.btn.btn-default(href='#0' data-dismiss='modal') Отмена
+          a.btn.btn-primary(href='#0' data-dismiss='modal') Регистрация

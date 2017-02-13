@@ -1,0 +1,68 @@
+aside.aside.aside__job
+  .search
+    input.input.input-search(type='text' name='name' placeholder='Search..')
+    button.button.button-search(type='button')
+      i.fa.fa-search
+  .sidebar-widget
+    h2.h2.sidebar__title
+      span.sidebar__text(href='#0')
+        i.fa.fa-folder-open
+        | Поиск специалиста
+    hr
+    form.form-search-master
+      .form-search-master__row
+        label.label(for='name') ФИО:
+        input#name.input(type='text' name='name' placeholder='Введите имя')
+      .form-search-master__row
+        label.label(for='country') Страна:
+        select#country.select.input(name='country')
+          - var n = 1
+          option(selected) Выберите страну
+          while n < 10
+            - var option = 'Страна-' + n++
+            option= option
+      .form-search-master__row
+        label.label(for='city') Город
+        select#city.input.select(name='city')
+          - var n = 1
+          option(selected) Выберите город
+          while n < 20
+            - var option = 'Город-' + n++
+            option= option
+      .form-search-master__row
+        label.label(for='university') Учебное заведение
+        select#university.input.select(name='university')
+          - var n = 1
+          option(selected) Выберите город
+          while n < 15
+            - var option = 'Учебное заведение-' + n++
+            option= option
+      .form-search-master__row
+        label.label(for='age-from') Возраст
+        select#age-from.input.select-age(name='age-from')
+          - var n = 1
+          option(selected) От
+          while n < 15
+            option= n++
+        select#age-to.input.select-age(name='age-to')
+          - var n = 15
+          option(selected) До
+          while n < 30
+            option= n++
+      .form-search-master__row
+        label.label(for='sex') Возраст
+        .form-search-master__radio
+          span#sex
+            input#radio-man.input-checkbox(type='radio' name='radio-group' value='1')
+            label.label(for='radio-man') Мужской
+            input#radio-woman.input-checkbox(type='radio' name='radio-group' value='2')
+            label.label(for='radio-woman') Женский
+      .form-search-master__row
+        label.label(for='post') Должность
+        select#post.input.select(name='post')
+          - var n = 1
+          option(selected) От
+          while n < 15
+            - var option = 'Должность-' + n++
+            option= option
+      button.btn.btn-primary(type='submit') Найти

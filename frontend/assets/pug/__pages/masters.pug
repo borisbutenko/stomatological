@@ -1,0 +1,55 @@
+extends ../base
+block vars
+  - var title = 'Специалисты в стоматологии'
+block main
+  - var submenu = [{name : 'правила', url : '#0'}]
+  include ../__blocks/menu__main-sub
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Специалисты',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__masters
+          h2.h2.section__title Специалисты в стоматологии
+          .main-widget.vacancy.masters
+            - var n = 0
+            ul.ads-result.clearfix
+              while n < 10
+                li.ads-result__item.clearfix
+                  .ads-result__row.clearfix
+                    .col-md-2.col-sm-4.col-xs-4
+                      a.ads-result__image(href='#0')
+                        img(src='assets/img/master-1.jpg' alt='')
+                    .col-md-10.col-sm-8.col-xs-8
+                      h2.h2.ads-result__title
+                        a(href='#0') Зограбян Артавазд Гагикович
+                      p.ads-result__link(href='#0') Калуга, Россия
+                      p.ads-result__location Главный врач
+                hr
+                - n++
+            ul.pagination
+              li
+                a.first(href='#0')
+                  i.fa.fa-angle-left
+              li
+                a.active 1
+              li
+                a(href='#0') 2
+              li
+                a(href='#0') 3
+              li
+                a(href='#0') 4
+              li
+                a(href='#0') 5
+              li
+                a.last(href='#0')
+                  i.fa.fa-angle-right
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/masters__aside

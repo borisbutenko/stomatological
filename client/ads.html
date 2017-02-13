@@ -39,7 +39,7 @@
                 <div class="header__actions">
                   <ul class="actions">
                     <li class="actions__item"><a class="actions__link btn btn-success btn-small js-login-modal" href="#0" data-toggle="modal" data-target="#modal-login"><i class="fa fa-sign-in"></i>Вход</a></li>
-                    <li class="actions__item"><a class="actions__link btn btn-primary btn-small" href="registration.html"><i class="fa fa-user"></i>Регистрация</a></li>
+                    <li class="actions__item"><a class="actions__link btn btn-primary btn-small js-reg-modal" href="#0" data-toggle="modal" data-target="#modal-reg"><i class="fa fa-user"></i>Регистрация</a></li>
                   </ul>
                 </div>
               </div>
@@ -61,7 +61,7 @@
                     <li class="menu-main__item-divider-vertical"></li>
                     <li class="menu-main__item"><a class="menu-main__link" href="ads.html">объявления</a></li>
                     <li class="menu-main__item-divider-vertical"></li>
-                    <li class="menu-main__item"><a class="menu-main__link" href="#0">специалисты</a></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="masters.html">специалисты</a></li>
                     <li class="menu-main__item-divider-vertical"></li>
                     <li class="menu-main__item"><a class="menu-main__link" href="#0">лаборатории</a></li>
                     <li class="menu-main__item-divider-vertical"></li>
@@ -468,7 +468,7 @@
                   </div>
                 </div>
                 <div class="form__group clearfix">
-                  <col-md-9 class="col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-12"><a class="form__login__link" href="recovery-password.html">Забыли пароль?</a><span class="form__login__link-divider">|</span><a class="form__login__link" href="registration.html">Регистрация</a></col-md-9>
+                  <col-md-9 class="col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-12"><a class="form__login__link" href="recovery-password.html">Забыли пароль?</a><span class="form__login__link-divider">|</span><a class="form__login__link" href="#0" data-dismiss="modal" data-toggle="modal" data-target="#modal-reg">Регистрация</a></col-md-9>
                 </div>
                 <div class="form__group clearfix">
                   <div class="col-md-9 col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-12">
@@ -479,7 +479,50 @@
                 </div>
               </div>
             </div>
-            <div class="modal-footer"><a class="btn btn-default" href="#0" data-dismiss="modal">Отмена</a><a class="btn btn-primary" href="#0">Вход</a></div>
+            <div class="modal-footer"><a class="btn btn-default" href="#0" data-dismiss="modal">Отмена</a><a class="btn btn-primary" href="#0" data-dismiss="modal">Вход</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-reg" tabindex="-1" role="dialog" aria-labelledby="form-reg">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form class="form form__registration">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Регистрация</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="form__group clearfix">
+                  <div class="col-md-12">
+                    <label class="label" for="login-reg">Логин:</label>
+                    <input class="input" id="login-reg" type="text" name="login">
+                    <p class="registration__help">Может состоять только из букв (A-Z a-z), цифр (0-9). Знак подчеркивания (_) лучше не использовать. Длина логина не может быть меньше 3 и больше 30 символов.</p>
+                  </div>
+                </div>
+                <div class="form__group clearfix">
+                  <div class="col-md-12">
+                    <label class="label" for="mail-reg">E-mail:</label>
+                    <input class="input" id="mail-reg" type="email" name="mail" required>
+                    <p class="registration__help">Для проверки регистрации и в целях безопасности нам нужен адрес вашей электронной почты.</p>
+                  </div>
+                </div>
+                <div class="form__group clearfix">
+                  <div class="col-md-12">
+                    <label class="label" for="password-reg">Пароль:</label>
+                    <input class="input" id="password-reg" type="password" name="password" required>
+                  </div>
+                </div>
+                <div class="form__group clearfix">
+                  <div class="col-md-12">
+                    <label class="label" for="password-reg-re">Повторите пароль:</label>
+                    <input class="input" id="password-reg-re" type="password" name="password" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"><a class="btn btn-default" href="#0" data-dismiss="modal">Отмена</a><a class="btn btn-primary" href="#0" data-dismiss="modal">Регистрация</a></div>
           </form>
         </div>
       </div>

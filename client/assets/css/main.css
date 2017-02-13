@@ -9276,6 +9276,9 @@ img {
 .section__job .main-widget__more {
   margin-top: 0;
 }
+.section__masters .ads-result__row {
+  margin-bottom: 0;
+}
 .aside .search {
   margin-bottom: 3rem;
 }
@@ -9517,6 +9520,29 @@ ul.pagination a.last > i {
   border-color: #00acdb;
   border-width: 0.2rem;
 }
+.sidebar-widget .form-search-master__row {
+  margin-bottom: 1rem;
+}
+.sidebar-widget .form-search-master label.label {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+}
+.sidebar-widget .form-search-master input.input {
+  display: block;
+  width: 100%;
+}
+.sidebar-widget .form-search-master select.select {
+  display: block;
+  width: 100%;
+}
+.sidebar-widget .form-search-master span#sex label.label {
+  display: inline-block;
+}
+.sidebar-widget .form-search-master span#sex input.input-checkbox {
+  position: relative;
+  top: 0.2rem;
+}
 .sidebar__title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -9633,6 +9659,21 @@ ul.pagination a.last > i {
 #modal-login .form__login__label-checkbox,
 #modal-login .form__login__link:first-of-type {
   margin-left: -0.5rem;
+}
+#modal-reg label.label {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+}
+#modal-reg input.input {
+  display: block;
+  width: 100%;
+}
+#modal-reg p {
+  margin: 0;
+  padding: 0.5rem 0 0 0.5rem;
+  color: #afbcc5;
+  font-size: 1.2rem;
 }
 .vacancy__row {
   margin-bottom: 1rem;
