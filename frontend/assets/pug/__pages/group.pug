@@ -15,7 +15,13 @@ block main
     .row
       .col-md-9.col-sm-8.col-xs-12
         section.section.section__group
-          h2.h2.section__title Группы по стоматологии
+          .clearfix
+            .col-md-6.col-sm-6.col-xs-12
+              h2.h2.section__title.pull-left Группы по стоматологии
+            .col-md-6.col-sm-6.col-xs-12
+              a.btn.btn-primary.section__group__link.pull-right
+                i.fa.fa-plus
+                | Создать группу
           .main-widget.vacancy.masters
             - var n = 0
             ul.ads-result.clearfix

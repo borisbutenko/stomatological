@@ -69,6 +69,10 @@
   .form button.btn {
     width: 100%;
   }
+  .section__group__link {
+    top: 0 !important;
+    margin-bottom: 2rem !important;
+  }
 }
 @media (max-width: 500px) {
   .thumbnails > .thumbnails__item {
@@ -9281,6 +9285,13 @@ img {
 }
 .section__group .ads-result__title {
   padding-bottom: 2rem;
+}
+.section__group__link {
+  position: relative;
+  top: 1rem;
+}
+.section__group__link > i {
+  margin-right: 0.5rem;
 }
 .aside .search {
   margin-bottom: 3rem;
