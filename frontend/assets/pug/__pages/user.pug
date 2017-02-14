@@ -1,0 +1,202 @@
+extends ../base
+block vars
+  - var title = 'Профессиональный стоматологический портал (сайт) «Клуб стоматологов»'
+block main
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'User-login',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__user
+          .clearfix.user
+            .col-md-12.col-sm-12.col-xs-12
+              .user__detail.clearfix
+                .user__logo.pull-left
+                  img(src='assets/img/group-logo.png' alt='')
+                h3.h3.user__login User-login
+                h4.h4.user__name Сидоров Иван Петрович
+          .col-md-12.col-sm-12.col-xs-12
+            h2.h2.section__title Редактирование профиля
+            .main-widget.main-widget__user
+              ul.nav.nav-tabs(role='tablist')
+                li.active(role='user')
+                  a(href='#user' aria-controls='profile' role='tab' data-toggle='tab') Анкета
+                li(role='user')
+                  a(href='#user-options' aria-controls='user-options' role='tab' data-toggle='tab') Настройки
+                li(role='user')
+                  a(href='#user-password' aria-controls='user-password' role='tab' data-toggle='tab') Изменить пароль
+              .tab-content
+                #user.tab-pane.active(role='tabpanel')
+                  h3.h3.user__title Личные данные
+                  hr
+                  table.detail-view
+                    tbody
+                      tr
+                        th Пол:
+                        td Мужской
+                      tr
+                        th Дата рождения:
+                        td 16 октября 1971
+                      tr
+                        th Местоположение
+                        td Россия, Москва
+                #user-options.tab-pane(role='tabpanel')
+                  form.form.form__user
+                    h3.h3.user__title Изменить профиль
+                    hr
+                    .form__group.clearfix
+                      label.label.form__user__label(for='surname') Фамилия
+                      input#surname.input(type='text' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='name') Имя
+                      input#name.input(type='text' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='patronymic') Отчество
+                      input#patronymic.input(type='text' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='sex') Пол
+                      .form__user__radio
+                        span#sex
+                          input#radio-man.input-checkbox(type='radio' name='radio-group' value='1')
+                          label.label(for='radio-man') Мужской
+                          input#radio-woman.input-checkbox(type='radio' name='radio-group' value='2')
+                          label.label(for='radio-woman') Женский
+                    .form__group.clearfix
+                      label.label.form__user__label(for='birthday') Дата рождения
+                      span#birthday
+                        select.select.input(name='day')
+                          option(selected) -
+                          - var n = 1
+                          while n < 32
+                            option= n++
+                        select.select.input(name='month')
+                          option(selected) - Выбор -
+                            - var n = 1
+                            while n < 13
+                              - var month = 'Месяц-' + n++
+                              option= month
+                        select.select.input(name='year')
+                          option(selected) - Выбор -
+                            - var n = 1950
+                            while n < 2010
+                              option= n++
+                    .form__group.clearfix
+                      label.label.form__user__label(for='country') Страна
+                      input#country.input(type='text' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='city') Город
+                      input#city.input(type='text' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label.form__user__label-textarea(for='about') О себе
+                      textarea#about.input.textarea
+                    .form__group.clearfix
+                      label.label.form__user__label(for='photo') Фото
+                      span.btn.btn-file.btn-default Выберите файл
+                        input#photo.input(type='file' name='name')
+                    hr
+                    h3.h3.user__title Опыт работы
+                    hr
+                    .form__group.clearfix
+                      label.label.form__user__label(for='company-name') Название компании
+                      input#company-name.input(type='text' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='post') Должность
+                      select#post.input.select(name='name')
+                        option(selected) - Выбор -
+                          - var n = 1
+                          while n < 20
+                            - var post = 'Должность-' + n++
+                            option= post
+                    .form__group.clearfix
+                      label.label.form__user__label(for='work-period-from') Период работы
+                      select#work-period-from.select.input(name='month')
+                        option(selected) - Выбор -
+                          - var n = 1
+                          while n < 13
+                            - var month = 'Месяц-' + n++
+                            option= month
+                      select.select.input(name='year')
+                        option(selected) - Выбор -
+                          - var n = 1950
+                          while n < 2010
+                            option= n++
+                    .form__group.clearfix
+                      label.label.form__user__label(for='work-period-to')
+                      select.select.input(name='month')
+                        option(selected) -Выбор -
+                          - var n = 1
+                          while n < 13
+                            - var month = 'Месяц-' + n++
+                            option= month
+                      select.select.input(name='year')
+                        option(selected) - По настоящее время -
+                          - var n = 1950
+                          while n < 2010
+                            option= n++
+                    .form__group.clearfix
+                      label.label.form__user__label
+                      a.form__group-user-add-work(href='#0') Добавить место работы
+                    hr
+                    h3.h3.user__title Образование
+                    hr
+                    .form__group.clearfix
+                      label.label.form__user__label(for='university-name') Учебное заведение
+                      select#university-name.input.select(name='name')
+                        option(selected) - Выбор -
+                          - var n = 1
+                          while n < 20
+                            - var un = 'Учебное заведение-' + n++
+                            option= un
+                    .form__group.clearfix
+                      label.label.form__user__label(for='spec') Специальность
+                      input#spec.input(type='text' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='un-from') Период учебы
+                      select#un-from.select.input(name='year')
+                        option(selected) - Выбор -
+                          - var n = 1950
+                          while n < 2010
+                            option= n++
+                      select.select.input(name='year')
+                        option(selected) - Выбор -
+                          - var n = 1950
+                          while n < 2010
+                            option= n++
+                    .form__group.clearfix
+                      label.label.form__user__label
+                      a.form__group-user-add-work(href='#0') Добавить учебное заведение
+                    hr
+                    h3.h3.user__title Сертификаты и свидетельства
+                    hr
+                    .form__group.clearfix
+                      label.label.form__user__label(for='certificate') Файл
+                      span.btn.btn-file.btn-default Выберите файл
+                        input#certificate.input(type='file' name='name')
+                    hr
+                    .form__group.clearfix
+                      button.btn.btn-primary(type='submit') Сохранить
+                #user-password.tab-pane(role='tabpanel')
+                  form.form.form__user
+                    h3.h3.user__title Изменить пароль
+                    hr
+                    .form__group.clearfix
+                      label.label.form__user__label(for='password-old') Старый пароль
+                      input#password-old.input(type='password' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='password') Новый пароль
+                      input#password.input(type='password' name='name')
+                    .form__group.clearfix
+                      label.label.form__user__label(for='password-re') Повторите пароль
+                      input#password-re.input(type='password' name='name')
+                    hr
+                    .form__group.clearfix
+                      button.btn.btn-primary(type='submit') Сохранить
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/main__aside

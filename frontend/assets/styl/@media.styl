@@ -3,6 +3,13 @@
     width: 32.25%
 
 @media (max-width: 992px)
+  .form__user
+    & #birthday
+      display: block
+    & label[for=work-period-from],
+    & label[for=work-period-to]
+      display: block !important
+
   .menu-main__item-divider-vertical
     display: none !important
 
@@ -26,6 +33,28 @@
     clear: none !important
 
 @media (max-width: 768px)
+  .form__user
+    & select.select
+      float: left
+      margin-right: .5rem
+      margin-bottom: .5rem
+    & span.btn-file
+      float: left
+      margin-left: 0
+    &__radio
+      width: 100%
+      & #sex > .input-checkbox
+        float: left !important
+        top: 0 !important
+        & + label.label
+          float: left
+          width: auto
+          margin-left: 1rem
+    & .form__user__label-textarea
+      top: 0
+      & + textarea.textarea
+        width: 100%
+
   #menu-main [data-toggle=dropdown]
     & + .dropdown-menu
       opacity: 1 !important
@@ -80,6 +109,9 @@
     margin-bottom: 2rem !important
 
 @media (max-width: 500px)
+  .section__user .main-widget
+    padding: 2rem
+
   .thumbnails > .thumbnails__item
     width: 100%
     margin-right: 0 !important
