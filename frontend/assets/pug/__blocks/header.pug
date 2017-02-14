@@ -6,7 +6,11 @@ header.header
           h1.h1.header__title= title
         .col-md-6.col-sm-6.col-xs-6
           .header__switcher.pull-right
-            a.header__switcher__link.js-switcher-modal(href='#0' data-toggle='modal' data-target='#modal-switcher') RU
+            a#language-switcher.header__switcher__link.dropdown-toggle(href='#0' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true') RU
+            ul.dropdown-menu(aria-labelledby='language-switcher')
+              a.header__switcher__link(href='#0') EN
+              a.header__switcher__link(href='#0') FR
+              a.header__switcher__link(href='#0') ES
           .header__social.pull-right
             include social
         .col-md-6.col-sm-6.col-xs-6

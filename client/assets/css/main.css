@@ -9878,6 +9878,20 @@ img {
 .section__group__link > i {
   margin-right: 0.5rem;
 }
+.section__rules a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.section__rules ol > li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.section__rules ol > li > ul {
+  margin-left: 2rem;
+}
+.section__rules ol > li > ul > li {
+  list-style-type: circle;
+}
 .aside .search {
   margin-bottom: 3rem;
 }
@@ -10239,6 +10253,9 @@ ul.pagination a.last > i {
   margin-bottom: 2rem;
   box-shadow: 0.1rem 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.05);
 }
+.main-widget-mt {
+  margin-top: 2rem;
+}
 .main-widget__title {
   font-size: 2.7rem;
   text-transform: uppercase;
@@ -10519,12 +10536,31 @@ ul.pagination a.last > i {
   margin-left: 1rem;
   margin-right: 0.5rem;
 }
+.header__switcher > a {
+  position: relative;
+  right: -0.3rem;
+  margin-left: 10rem;
+}
+.header__switcher > a + .dropdown-menu {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: right;
+  top: -0.7rem;
+  right: 3.5rem;
+}
 .header__switcher__link {
   background: #e4edee;
   border: 0.1rem solid rgba(66,139,202,0.5);
   border-radius: 50%;
   color: #455f68;
   padding: 0.5rem;
+  margin: 0 0.25rem;
+  display: inline-block;
+  width: 3rem;
+  text-align: center;
+  position: relative;
+  top: -0.7rem;
 }
 .header__switcher__link:hover {
   background: rgba(62,145,173,0.2);

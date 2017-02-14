@@ -3,29 +3,117 @@ block vars
   - var title = 'Профессиональный стоматологический портал (сайт) «Клуб стоматологов»'
 block main
   .container
-    .row
+    .row.main-widget-mt
       .col-md-9.col-sm-8.col-xs-12
+        section.section.section__job
+          .main-widget.vacancy.ads-container
+            h2.h2.main-widget__title
+              a(href='ads.html') Объявления
+            hr
+            .clearfix
+              - var n = 0
+              ul.ads-result.clearfix
+                while n < 3
+                  li.ads-result__item.clearfix
+                    .ads-result__row.clearfix
+                      .col-md-2.col-sm-4.col-xs-12
+                        a.ads-result__image(href='#0')
+                          img(src='assets/img/g-1.jpg' alt='')
+                      .col-md-7.col-sm-8.col-xs-12
+                        h2.h2.ads-result__title
+                          a(href='#0') Ортопантомограф Sirona Orthophos xg3
+                        a.ads-result__link.text-italic(href='#0')
+                          i.fa.fa-folder-open
+                          | Аренда кресла, кабинета
+                        p.ads-result__location
+                          i.fa.fa-globe
+                          | Москва
+                      .col-md-3.col-sm-12.col-xs-12
+                        p.ads-result__price.pull-right
+                          | 30 000
+                          i.fa.fa-rub
+                        p.ads-result__date.pull-right
+                          i.fa.fa-clock-o
+                          | 9 января 2017
+                  hr
+                  - n++
+              hr
+            .main-widget__more.text-right
+              a.sidebar__link(href='#0')
+                | Смотреть все объявления
+                i.fa.fa-level-up
+        section.section.section__group
+          .main-widget.vacancy.masters
+            h2.h2.main-widget__title
+              a(href='group.html') Группы
+            hr
+            - var n = 0
+            ul.ads-result.clearfix
+              while n < 3
+                li.ads-result__item.clearfix
+                  .ads-result__row.clearfix
+                    .col-md-2.col-sm-4.col-xs-4
+                      a.ads-result__image(href='#0')
+                        img(src='assets/img/group-logo.png' alt='')
+                    .col-md-10.col-sm-8.col-xs-8
+                      h2.h2.ads-result__title
+                        a(href='#0') Управляющие стом. бизнесом
+                      p.ads-result__location
+                        i.fa.fa-group
+                        | 39 участников
+                hr
+                - n++
+            hr
+            .main-widget__more.text-right
+              a.sidebar__link(href='#0')
+                | Смотреть все группы
+                i.fa.fa-level-up
+        section.section.section__masters
+          .main-widget.vacancy.masters
+            h2.h2.main-widget__title
+              a(href='masters.html') Наши мастера
+            hr
+            - var n = 0
+            ul.ads-result.clearfix
+              while n < 4
+                li.ads-result__item.clearfix
+                  .ads-result__row.clearfix
+                    .col-md-2.col-sm-4.col-xs-4
+                      a.ads-result__image(href='#0')
+                        img(src='assets/img/master-1.jpg' alt='')
+                    .col-md-10.col-sm-8.col-xs-8
+                      h2.h2.ads-result__title
+                        a(href='#0') Зограбян Артавазд Гагикович
+                      p.ads-result__link(href='#0') Калуга, Россия
+                      p.ads-result__location Главный врач
+                hr
+                - n++
+            hr
+            .main-widget__more.text-right
+              a.sidebar__link(href='#0')
+                | Смотреть всех мастеров
+                i.fa.fa-level-up
         section.section.section__main
           .main-widget
             h2.h2.main-widget__title
-              a(href='#0') Галерея
+              a(href='gallery.html') Галерея
             hr
             - var c = 0
-              while c < 2
-                - var n = 0
-                ul.thumbnails.clearfix
-                  while n < 3
-                    li.thumbnails__item
-                      .thumbnail__container
-                        a.thumbnail__link(href='#0')
-                          img.thumbnail__img(src='assets/img/g-1.jpg' alt='')
-                        h3.h3.thumbnails__title.text-nowrap
-                          a.thumbnail__link(href='#0') Видимо делал еще тот мастер стоматолог
-                        .thumbnails__comment
-                          i.fa.fa-comment
-                          | 5
-                    - n++
-                - c++
+            while c < 2
+              - var n = 0
+              ul.thumbnails.clearfix
+                while n < 3
+                  li.thumbnails__item
+                    .thumbnail__container
+                      a.thumbnail__link(href='#0')
+                        img.thumbnail__img(src='assets/img/g-1.jpg' alt='')
+                      h3.h3.thumbnails__title.text-nowrap
+                        a.thumbnail__link(href='#0') Видимо делал еще тот мастер стоматолог
+                      .thumbnails__comment
+                        i.fa.fa-comment
+                        | 5
+                  - n++
+              - c++
             .main-widget__more.text-right
               a.sidebar__link(href='#0')
                 | Смотреть все альбомы
