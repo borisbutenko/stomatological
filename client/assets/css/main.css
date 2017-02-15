@@ -10067,6 +10067,51 @@ ul.pagination a.last > i {
 .social__link {
   font-size: 2.8rem;
 }
+.social-fixed {
+  position: fixed;
+  top: 40%;
+  left: 0;
+}
+.social-fixed > div {
+  padding: 1rem 0.5rem;
+  position: relative;
+  left: -13rem;
+  transition: left 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.social-fixed > div > a {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #fff;
+  width: 15rem;
+  margin-left: 1rem;
+  padding-right: 0.5rem;
+}
+.social-fixed > div i {
+  font-size: 2rem;
+}
+.social-fixed__vk {
+  background: #39579a;
+  color: #fff;
+}
+.social-fixed__vk:hover {
+  left: 0;
+  background: #374c7b;
+}
+.social-fixed__vk i {
+  margin-left: 0.8rem;
+}
+.social-fixed__fb {
+  background: #507298;
+  color: #fff;
+  left: 0;
+}
+.social-fixed__fb:hover {
+  left: 0;
+  background: #4372a7;
+}
+.social-fixed__fb i {
+  margin-left: 2rem;
+}
 .menu-main {
   background-color: #fff;
   box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.065);
@@ -10134,6 +10179,15 @@ ul.pagination a.last > i {
   height: 5rem;
   border-left: 1px solid #37c6d6;
 }
+.menu-sub__item.active {
+  background-color: #fff !important;
+}
+.menu-sub__item.active > a {
+  background-color: #fff !important;
+  color: #233a46;
+  border: none;
+  border-bottom: 0.2rem solid #00acdb;
+}
 .menu-sub__link {
   text-shadow: 0 0.1rem 0 #496174;
   font-weight: 600;
@@ -10141,12 +10195,6 @@ ul.pagination a.last > i {
   border: none;
   border-bottom: 0.2rem solid transparent;
   color: #4c7284;
-}
-.menu-sub__link.active {
-  background: #fff;
-  color: #233a46;
-  border: none;
-  border-bottom: 0.2rem solid #00acdb;
 }
 .menu-sub__link:hover {
   border: none;
@@ -10504,6 +10552,9 @@ ul.pagination a.last > i {
   height: 100%;
   left: 0;
   top: 0;
+}
+.btn-file + span {
+  margin-left: 1rem;
 }
 .user__detail {
   margin: 2rem 0;

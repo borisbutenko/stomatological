@@ -1,0 +1,47 @@
+extends ../base
+block vars
+  - var title = 'Зуботехнические лаборатории и услуги'
+block main
+  - var submenu = [{name : 'Все лаборатории', url : 'labs.html', parent : 'labs.html'}, {name : 'Города и страны', url : 'labs-city.html', parent : 'labs.html'}, {name : 'Для лабораторий', url : 'labs-for.html', parent : 'labs.html'}]
+  include ../__blocks/menu__main-sub
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Города и страны',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__labs
+          .clearfix
+            .col-md-12.col-sm-12.col-xs-12
+              h2.h2.section__title.pull-left Выбор зуботехнических лабораторий по стране и городу
+          .main-widget.main-widget__labs.main-widget__labs-city
+            .row
+              .col-md-12.col-sm-12.col-xs-12
+                p.labs-title Россия
+                hr
+              .col-md-3.col-sm-4.col-xs-6
+                ul.labs__list
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Екатеринбург
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Волгоград
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Санкт-Петербург
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Москва
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Екатеринбург
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Волгоград
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Санкт-Петербург
+                  li.labs__item
+                    a.labs__link(href='labs-city-detail.html') Москва
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/main__aside

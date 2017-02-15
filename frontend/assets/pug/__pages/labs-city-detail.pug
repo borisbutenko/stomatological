@@ -10,7 +10,7 @@ block main
           url: 'index.html'
       },
       {
-          name: 'Лаборатории',
+          name: 'Город',
           url: null
       }])
   .container
@@ -19,7 +19,7 @@ block main
         section.section.section__labs
           .clearfix
             .col-md-10.col-sm-6.col-xs-12
-              h2.h2.section__title.pull-left Зуботехнические лаборатории и услуги
+              h2.h2.section__title.pull-left Зуботехнические лаборатории и услуги в Городе
             .col-md-2.col-sm-6.col-xs-12
               a.btn.btn-primary.section__group__link.pull-right
                 i.fa.fa-plus
@@ -57,7 +57,7 @@ block main
             .clearfix
               - var n = 0
               ul.ads-result.clearfix
-                while n < 10
+                while n < 3
                   li.ads-result__item.clearfix
                     .ads-result__row.clearfix
                       .col-md-3.col-sm-5.col-xs-12
@@ -65,10 +65,10 @@ block main
                           img(src='assets/img/labs-1.jpg' alt='')
                       .col-md-9.col-sm-8.col-xs-12
                         h2.h2.ads-result__title
-                          a(href='#0') Дентленд
+                          a(href='#0') Лаборатория города
                         a.ads-result__link(href='#0')
                           i.fa.fa-fw.fa-location-arrow
-                          | Нижний Новгород, ул. Культуры, д. 100а
+                          | Какой-то город, ул. Города, д. 13
                         p.ads-result__location
                           i.fa.fa-clock-o
                           strong Пн – Пт:&nbsp;
@@ -79,22 +79,5 @@ block main
                           span выходной
                   hr
                   - n++
-            ul.pagination
-              li
-                a.first(href='#0')
-                  i.fa.fa-angle-left
-              li
-                a.active 1
-              li
-                a(href='#0') 2
-              li
-                a(href='#0') 3
-              li
-                a(href='#0') 4
-              li
-                a(href='#0') 5
-              li
-                a.last(href='#0')
-                  i.fa.fa-angle-right
       .col-md-3.col-sm-4.col-xs-12
         include ../__blocks/main__aside

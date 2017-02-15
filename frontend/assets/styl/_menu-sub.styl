@@ -8,6 +8,13 @@
     &-divider-vertical
       height: 5rem
       border-left: 1px solid #37c6d6
+    &.active
+      background-color: #fff !important
+      & > a
+        background-color: #fff !important
+        color: #233a46
+        border: none
+        border-bottom: .2rem solid #00acdb
   &__link
     text-shadow: 0 .1rem 0 #496174
     font-weight: 600
@@ -15,11 +22,6 @@
     border: none
     border-bottom: .2rem solid transparent
     color: #4c7284
-    &.active
-      background: #fff
-      color: #233a46
-      border: none
-      border-bottom: .2rem solid #00acdb
     &:hover
       border: none
       background: #f1f8f9

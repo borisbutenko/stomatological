@@ -1,8 +1,8 @@
 extends ../base
 block vars
-  - var title = 'Доска объявлений (объявления по стоматологии)'
+  - var title = 'Вакансии по стоматологии'
 block main
-  - var submenu = [{name : 'Правила', url : 'rules.html', parent : 'ads.html'}]
+  - var submenu = [{name : 'Вакансии', url : 'vacancy.html', parent : 'job.html'}, {name : 'Резюме', url : 'resume.html', parent : 'job.html'}]
   include ../__blocks/menu__main-sub
   +breadcrumbs([
       {
@@ -10,7 +10,7 @@ block main
           url: 'index.html'
       },
       {
-          name: 'Доска объявлений',
+          name: 'Вакансии по стоматологии',
           url: null
       }])
   .container
@@ -20,20 +20,20 @@ block main
           .main-widget.vacancy.ads
             .clearfix
               h2.h2.main-widget__title.pull-left
-                span Доска объявлений
+                span Вакансии по стоматологии
               a.btn.btn-primary.section__job__link.pull-right(href='#0')
                 i.fa.fa-plus
-                | Разместить объявление
+                | Добавить вакансию
             hr
             .ads__search.clearfix
               .col-md-4.col-sm-12.col-xs-12
                 label.label(for='category') Рубрика
                 select#category.input.select(name='category')
                   - var n = 1
-                    option(selected) Не важно
-                    while n < 8
-                      - var option = 'Рубрика-' + n++
-                      option= option
+                  option(selected) Не важно
+                  while n < 8
+                    - var option = 'Рубрика-' + n++
+                    option= option
               .col-md-4.col-sm-12.col-xs-12
                 label.label(for='county') Страна
                 select#county.input.select(name='county')
@@ -53,34 +53,27 @@ block main
               .col-md-12.col-sm-12.col-xs-12.pull-right
                 a.btn.btn-primary.section__job__link.pull-right(href='#0')
                   i.fa.fa-search
-                  | Найти объявление
+                  | Найти вакансии
         section.section.section__job
           .main-widget.vacancy.ads-container
             .clearfix
               - var n = 0
-              ul.ads-result.clearfix
-                while n < 10
-                  li.ads-result__item.clearfix
-                    .ads-result__row.clearfix
-                      .col-md-2.col-sm-4.col-xs-12
-                        a.ads-result__image(href='#0')
-                          img(src='assets/img/g-1.jpg' alt='')
-                      .col-md-7.col-sm-8.col-xs-12
-                        h2.h2.ads-result__title
-                          a(href='#0') Ортопантомограф Sirona Orthophos xg3
-                        a.ads-result__link.text-italic(href='#0')
-                          i.fa.fa-folder-open
-                          | Аренда кресла, кабинета
-                        p.ads-result__location
-                          i.fa.fa-globe
-                          | Москва
-                      .col-md-3.col-sm-12.col-xs-12
-                        p.ads-result__price.pull-right
-                          | 30 000
-                          i.fa.fa-rub
-                        p.ads-result__date.pull-right
-                          i.fa.fa-clock-o
-                          | 9 января 2017
+              ul.vacancy.clearfix
+                while n < 5
+                  li.vacancy__item
+                    .vacancy__row.clearfix
+                      h3.h3.vacancy__title.pull-left
+                        a(href='#0') Зубной техник
+                      span.vacancy__salary.pull-right з/п договорная
+                    .vacancy__row.clearfix
+                      p.vacancy__company Диамант
+                    .vacancy__row.clearfix
+                      span.vacancy__location.pull-left
+                        i.fa.fa-globe
+                        | Новосибирск
+                      span.vacancy__date.pull-right
+                        i.fa.fa-clock-o
+                        | 15 февраля 2017
                   hr
                   - n++
             ul.pagination
@@ -101,4 +94,4 @@ block main
                 a.last(href='#0')
                   i.fa.fa-angle-right
       .col-md-3.col-sm-4.col-xs-12
-        include ../__blocks/ads__aside
+        include ../__blocks/rubric__aside

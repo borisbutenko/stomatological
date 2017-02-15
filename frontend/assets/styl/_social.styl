@@ -3,3 +3,38 @@
     display: inline-block
   &__link
     font-size: 2.8rem
+  &-fixed
+    position: fixed
+    top: 40%
+    left: 0
+    & > div
+      padding: 1rem .5rem
+      position: relative
+      left: -13rem
+      transition: left 500ms cubic-bezier(.455,.03,.515,.955)
+      & > a
+        font-weight: 600
+        font-size: 1.4rem
+        color: #fff
+        width: 15rem
+        margin-left: 1rem
+        padding-right: .5rem
+      & i
+        font-size: 2rem
+    &__vk
+      background: #39579A
+      color: #fff
+      &:hover
+        left: 0
+        background: rgb(55, 76, 123)
+      & i
+        margin-left: .8rem
+    &__fb
+      background: #507298
+      color: #fff
+      left: 0
+      &:hover
+        left: 0
+        background: #4372a7
+      & i
+        margin-left: 2rem

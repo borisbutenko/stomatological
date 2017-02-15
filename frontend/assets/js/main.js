@@ -21,13 +21,34 @@
         (function() {
             var path = location.pathname;
 
-            $('.js-main-menu .menu-main__link').each(function() {
+            $('.js-main-menu .menu-main__link, .js-menu-sub .menu-sub__link').each(function() {
                var self$ = $(this),
                    href = self$.attr('href');
 
-               if ( ~path.indexOf(href) ) self$.parent().addClass('active');
+               if ( ~path.indexOf(href) ) {
+                   var data = self$.parent().addClass('active').data('parent');
+                   $('#menu-main a[href="' + data + '"]').parent().addClass('active');
+               }
             });
         })();
+
+        /**
+         *  View file on input file change (+ span)
+         */
+        $('input:file').on('change', function() {
+            var self$ = $(this),
+                path  = self$.val(),
+                file;
+
+            if ( $(this).val().lastIndexOf('\\') )
+                file = path.lastIndexOf('\\') + 1;
+            else
+                file = path.lastIndexOf('/') + 1;
+
+            file = path.slice(file);
+
+            self$.parent().next().html(file);
+        });
 
     });
 

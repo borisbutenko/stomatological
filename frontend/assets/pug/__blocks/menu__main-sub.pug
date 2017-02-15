@@ -6,10 +6,10 @@ nav.navbar.navbar-default.menu-sub.js-menu-sub
         - var last = 1
         each item in submenu
           if length == last
-            li.menu-sub__item
+            li.menu-sub__item(data-parent=item.parent)
               a.menu-sub__link(href=item.url)= item.name
           else
-            li.menu-sub__item
+            li.menu-sub__item(data-parent=item.parent)
               a.menu-sub__link(href=item.url)= item.name
             //li.menu-sub__item-divider-vertical
           - last++
