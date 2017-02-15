@@ -1,0 +1,93 @@
+extends ../base
+block vars
+  - var title = 'Резюме'
+block main
+  - var submenu = [{name : 'Вакансии', url : 'vacancy.html', parent : 'job.html'}, {name : 'Резюме', url : 'resume.html', parent : 'job.html'}]
+  include ../__blocks/menu__main-sub
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Резюме',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__job
+          h2.h2.section__title Врач-имплантолог
+          .main-widget.vacancy
+            h2.h2.main-widget__title ЛИЧНОЕ
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th Пол
+                  td Мужской
+                tr
+                  th Семейное положение
+                  td Женат
+                tr
+                  th Возраст
+                  td 34 года
+                tr
+                  th Личные качества
+                  td Аккуратный, трудоспособный, пунктуальный.
+            h2.h2.main-widget__title ЖЕЛАЕМЫЕ УСЛОВИЯ
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th График работы
+                  td Сменный график
+                tr
+                  th Тип занятости
+                  td Частичная занятость
+                tr
+                  th Зарплата
+                  td
+                    strong от 80 000&nbsp;
+                      i.fa.fa-rub
+            h2.h2.main-widget__title ОПЫТ РАБОТЫ И НАВЫКИ
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th Стаж работы
+                  td Свыше 5 лет
+                tr
+                  th Навыки и опыт
+                  td Амбулаторная помощь в полном объеме детскому и взрослому населению по хирургической стоматологии: удаление зубов любой сложности, удаление новообразовании и кист, френулопластика, парадонтопластика, костная пластика (алло и ауто костю), синуслифтинг, дентальная имплантация (AstraTech, Zimmer, Nobel, Dentis, MIS, AlphaBio, AlfaGait, Dentium, ..............
+            h2.h2.main-widget__title ОБРАЗОВАНИЕ
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th Образование
+                  td Высшее
+                tr
+                  th Учебное заведение
+                  td Ереванский государственный медицинский университет
+                tr
+                  th Основная специальность по диплому
+                  td Стоматолог
+                tr
+                  th Дополнительное образование
+                  td Хирург стоматолог.челюстно-лицевой хирург<br>Сертификат специалиста по челюстно-лицевой хирургии выдан 25 июня 2014г. в г. Москве. ГБОУ ВПО «МОСК
+            h2.h2.main-widget__title КОНТАКТЫ
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th Местоположение
+                  td Москва
+                tr
+                  th Полное имя
+                  td Ваганян Сергей Вагифович
+                tr
+                  th Телефон
+                  td Пишите личное сообщение
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/job__aside

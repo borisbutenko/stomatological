@@ -50,6 +50,12 @@
             self$.parent().next().html(file);
         });
 
+        /**
+         *  Lab add service list/item
+         */
+        $('.js-lab').on('click', function() {
+            return false;
+        });
     });
 
 })(jQuery);

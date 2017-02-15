@@ -1,0 +1,100 @@
+extends ../base
+block vars
+  - var title = 'Добавление лаборатории'
+block main
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Добавление лаборатории',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__add-resume
+          .col-md-12.col-sm-12.col-xs-12
+            h2.h2.section__title Добавление лаборатории
+            .main-widget.main-widget__user
+              form.form.form__user
+                h3.h3.user__title Общие настройки
+                hr
+                .form__group.clearfix
+                  label.label.form__user__label Название
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Логотип
+                  span.btn.btn-file.btn-default Выберите файл
+                    input#photo.input(type='file' name='name')
+                  span
+                .form__group.clearfix
+                  label.label.form__user__label.form__user__label-textarea О лаборатории
+                  textarea.input.textarea
+                hr
+                h3.h3.user__title Контактная информация
+                hr
+                .form__group.clearfix
+                  label.label.form__user__label Страна
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Страна-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Город
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Город-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Станция метро
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Станция метро-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Адрес
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Телефон
+                  input.input(type='phone' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Email
+                  input.input(type='email' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Web-сайт
+                  input.input(type='text' name='name')
+                //hr
+                //h3.h3.user__title Услуги
+                //.lab-services
+                //  #lab-service-list
+                //    hr
+                //    .form__group.clearfix
+                //      label.label.form__user__label Заголовок списка услуг
+                //      input.input(type='text' name='name')
+                //    hr
+                //    .lab-services-item
+                //      #lab-service-item
+                //        .form__group.clearfix
+                //          label.label.form__user__label Название
+                //          input.input(type='text' name='name')
+                //        .form__group.clearfix
+                //          label.label.form__user__label Цена
+                //          input.input(type='text' name='name' placeholder='руб.')
+                //    .form__group.clearfix
+                //      button.btn.btn-primary.js-lab(type='button' data-target='#lab-service-item') Добавить услугу
+                //hr
+                //.form__group.clearfix
+                //  button.btn.btn-primary.js-lab(type='button' data-target='#lab-service-list') Добавить список
+                hr
+                .form__group.clearfix
+                  button.btn.btn-primary(type='submit') Создать
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/main__aside

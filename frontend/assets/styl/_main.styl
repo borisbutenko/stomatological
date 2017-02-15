@@ -72,6 +72,11 @@ img
           margin-left: 2rem
           & > li
             list-style-type: circle
+  &__add-resume
+    & input.input,
+    & select.select
+    & textarea.textarea
+      min-width: 20rem
 
 .aside
   & .search
@@ -83,6 +88,24 @@ img
         content: '\f114'
         margin-right: 1rem
         color: #555
+  &__labs
+    &__logo
+      width: 100%
+      text-align: center
+      margin-bottom: 2rem
+      & > img
+        width: 100%
+    & p
+      & > i
+        margin-right: .5rem
+      &.address
+        position: relative
+        padding-left: 1.5rem
+        & > i
+          position: absolute
+          top: .3rem
+          left: 0
+
 
 .text
   &-center
@@ -194,3 +217,19 @@ ul.pagination
 #menu-main .dropdown-menu:hover
   display: block
   opacity: 1
+
+.table
+  &-lab
+    & tr > td
+      vertical-align: top
+      &:first-child
+        width: 80%
+      &:last-child
+        text-align: right
+        width: 20%
+        font-weight: 600
+        & > i
+          margin-left: .5rem
+
+.lab-service-item
+  margin-bottom: 3rem

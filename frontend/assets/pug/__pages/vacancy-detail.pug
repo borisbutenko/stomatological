@@ -1,0 +1,76 @@
+extends ../base
+block vars
+  - var title = 'Вакансия'
+block main
+  - var submenu = [{name : 'Вакансии', url : 'vacancy.html', parent : 'job.html'}, {name : 'Резюме', url : 'resume.html', parent : 'job.html'}]
+  include ../__blocks/menu__main-sub
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Вакансия',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__job
+          h2.h2.section__title Зубной техник
+          .main-widget.vacancy
+            h2.h2.main-widget__title Кто нам нужен
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th Должность
+                  td Зубной техник
+                tr
+                  th Должностные инструкции
+                  td Изготовление металлокерамики любой сложности<br><br>* несъемное протезирование: металлокерамика; ZrO2; E.max<br><br>* съемное и бюгельное протезирование
+                tr
+                  th Возраст
+                  td Не задан
+                tr
+                  th Требования
+                  td * опыт работы с металлокерамикой не менее 3-х лет - обязателен<br><br>* опыт работы с безметалловыми системами e.max Press, CAD/CAM ZrO2 крайне желателен<br><br>* желателен опыт работы с фрезерованными и замковыми бюгельными протезами и их модификациями<br><br>* желателен опыт работы по протезированию на имплантатах различных систем
+            h2.h2.main-widget__title НАШИ УСЛОВИЯ
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th График работы
+                  td Полный рабочий день
+                tr
+                  th Тип занятости
+                  td Полная занятость
+                tr
+                  th Зарплата
+                  td
+                    strong Договорная
+                tr
+                  th Условия работы
+                  td * официальное трудоустройство<br><br>* комфортные условия труда<br><br>* профессиональный и карьерный рост<br><br>* работу в дружном, морально здоровом коллективе
+            h2.h2.main-widget__title КОНТАКТЫ
+            hr
+            table.detail-view
+              tbody
+                tr
+                  th Местоположение
+                  td Новосибирск
+                tr
+                  th Название компании
+                  td ООО "Лаборатория Дентального Дизайна"
+                tr
+                  th Сайт
+                  td
+                    a(href='#0') http://www.site.ru
+                tr
+                  th Контактное лицо
+                  td Востриков Сергей Анатольевич
+                tr
+                  th Телефон
+                  td 8 999 999 99 99
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/job__aside

@@ -1,0 +1,115 @@
+extends ../base
+block vars
+  - var title = 'Создание вакансии'
+block main
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Создание вакансии',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__add-resume
+          .col-md-12.col-sm-12.col-xs-12
+            h2.h2.section__title Создание вакансии
+            .main-widget.main-widget__user
+              form.form.form__user
+                .form__group.clearfix
+                  label.label.form__user__label Рубрика
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Рубрика-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Страна
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Страна-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Город
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Город-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label График работы
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'График-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Тип занятости
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Тип занятости-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Зарплата от
+                  input.input(type='text' name='name' placeholder='руб.')
+                .form__group.clearfix
+                  label.label.form__user__label Зарплата до
+                  input.input(type='text' name='name' placeholder='руб.')
+                .form__group.clearfix
+                  label.label.form__user__label.form__user__label-textarea Должностные инструкции
+                  textarea.input.textarea
+                .form__group.clearfix
+                  label.label.form__user__label.form__user__label-textarea Условия работы
+                  textarea.input.textarea
+                .form__group.clearfix
+                  label.label.form__user__label Возраст от
+                  input.input(type='text' name='name' placeholder='лет')
+                .form__group.clearfix
+                  label.label.form__user__label Возраст до
+                  input.input(type='text' name='name' placeholder='лет')
+                .form__group.clearfix
+                  label.label.form__user__label Образование
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Образование-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Стаж
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Стаж-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label.form__user__label-textarea Требования
+                  textarea.input.textarea
+                .form__group.clearfix
+                  label.label.form__user__label Название компании
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Контактное лицо
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Телефон
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Сайт
+                  input.input(type='text' name='name')
+                hr
+                .form__group.clearfix
+                  button.btn.btn-primary(type='submit') Создать
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/rubric__aside

@@ -1,0 +1,87 @@
+extends ../base
+block vars
+  - var title = 'Лаборатория (Город)'
+block main
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Лаборатория',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__user
+          .col-md-12.col-sm-12.col-xs-12
+            h2.h2.section__title Лаборатория
+            .main-widget.main-widget__user
+              ul.nav.nav-tabs(role='tablist')
+                li.active(role='lab')
+                  a(href='#name' aria-controls='name' role='tab' data-toggle='tab') Главная
+                li(role='lab')
+                  a(href='#service' aria-controls='service' role='tab' data-toggle='tab') Услуги и цены
+              .tab-content
+                #name.tab-pane.active(role='tabpanel')
+                  h3.h3.user__title О ЛАБОРАТОРИИ
+                  hr
+                  p
+                    strong Зуботехническая лаборатория "ZubKapRemont" предлагает:
+                  ol
+                    li Изготовление зубных коронок
+                    li Изготовление съемных и бюгельных протезов
+                    li Изготовление виниров керамических
+                    li Безметалловую керамику (оксид циркония)
+                  p Индивидуальный подход к каждому клиенту, высокий уровень работ и минимальные сроки гарантируются.
+                #service.tab-pane(role='tabpanel')
+                  h3.h3.user__title УСЛУГИ И ЦЕНЫ
+                  hr
+                  p
+                    i Последняя актуализация данных по услугам и ценам производилась 21 декабря 2016 г.
+                  table.table.table-hover.table-lab
+                    thead
+                      th(colspan='2') Диагностика
+                    tbody
+                      - var n = 0
+                      while n < 5
+                        - var service = 'Услуга-' + n++
+                          tr
+                            td= service
+                            td.price 3 500
+                              i.fa.fa-rub
+                    thead
+                      th(colspan='2') Металлокерамические конструкции
+                    tbody
+                      - var n = 0
+                      while n < 5
+                        - var service = 'Услуга-' + n++
+                        tr
+                          td= service
+                          td.price 3 500
+                            i.fa.fa-rub
+                    thead
+                      th(colspan='2') Цельнокерамические конструкции
+                    tbody
+                      - var n = 0
+                      while n < 5
+                        - var service = 'Услуга-' + n++
+                        tr
+                          td= service
+                          td.price 3 500
+                            i.fa.fa-rub
+                    thead
+                      th(colspan='2') Съемное протезирование
+                    tbody
+                      - var n = 0
+                      while n < 5
+                        - var service = 'Услуга-' + n++
+                        tr
+                          td= service
+                          td.price 3 500
+                            i.fa.fa-rub
+                  p
+                    i Указанные услуги и цены могут несколько отличаться от текущих цен в прайсе лаборатории. Уточняйте стоимость в лаборатории.
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/lab-detail__aside
