@@ -124,6 +124,9 @@
   }
 }
 @media (max-width: 500px) {
+  .logo__name {
+    font-size: 1.3rem !important;
+  }
   .section__user .main-widget {
     padding: 2rem;
   }
@@ -10468,23 +10471,25 @@ ul.pagination a.last > i {
   margin-bottom: 3rem;
 }
 .logo {
-  height: 3.9rem;
-  font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
-  line-height: 1;
-  position: relative;
   display: inline-block;
-  padding-left: 4.6rem;
-  background: url("../img/logo.png") no-repeat left center;
+  width: 8rem;
+  height: 6rem;
+  background: url("../img/logo.png") no-repeat 50%;
+  background-size: 200%;
 }
 .logo__name {
   font-size: 1.8rem;
   color: #099ece;
   text-shadow: 0 0.1rem 0 #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 11rem;
 }
 .logo__url {
   position: absolute;
-  bottom: 0;
-  left: 4.6rem;
+  top: 3.8rem;
+  left: 11rem;
   padding: 0.2rem 1.2rem;
   font-size: 1.2rem;
   background-color: #23b7e7;
