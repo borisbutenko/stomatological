@@ -1,0 +1,73 @@
+extends ../base
+block vars
+  - var title = 'Создание объявления'
+block main
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Создание объявления',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__add-resume
+          .col-md-12.col-sm-12.col-xs-12
+            h2.h2.section__title Создание объявления
+            .main-widget.main-widget__user
+              form.form.form__user
+                .form__group.clearfix
+                  label.label.form__user__label Рубрика
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Рубрика-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Страна
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Страна-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Город
+                  select.select.input
+                    option(selected) - Выбор -
+                      - var n = 1
+                      while n < 10
+                        - var month = 'Город-' + n++
+                        option= month
+                .form__group.clearfix
+                  label.label.form__user__label Название
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label.form__user__label-textarea Текст
+                  textarea.input.textarea
+                .form__group.clearfix
+                  label.label.form__user__label Телефон
+                  input.input(type='phone' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Цена
+                  input.input(type='text' name='name' placeholder='руб.')
+                .form__group.clearfix
+                  label.label.form__user__label Контактное лицо
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Метки
+                  input.input(type='text' name='name')
+                .form__group.clearfix
+                  label.label.form__user__label Изображение
+                  span.btn.btn-file.btn-default Выберите файл
+                    input#photo.input(type='file' name='name')
+                  span
+                hr
+                .form__group.clearfix
+                  button.btn.btn-primary(type='submit') Создать
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/main__aside
