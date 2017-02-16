@@ -1,0 +1,83 @@
+extends ../base
+block vars
+  - var title = 'Сдам стоматологическое кресло м. Новослободская'
+block main
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Сдам стоматологическое кресло м. Новослободская',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__ads-detail
+          .col-md-12.col-sm-12.col-xs-12
+            h2.h2.section__title Лаборатория
+            .ads-detail__price
+              | 700
+              i.fa.fa-rub
+            .main-widget.main-widget__ads-detail
+              .ads-detail__header.clearfix
+                .ads-detail__category.pull-left
+                  i.fa.fa-folder-open
+                  a(href='#0') Аренда кресла, кабинета
+                .ads-detail__date.pull-right
+                  i.fa.fa-clock-o
+                  | 16 февраля 2017, 6:55
+                .ads-detail__user.pull-right
+                  i.fa.fa-user
+                  a(href='#0') User-login
+              .ads-detail__body.clearfix
+                .col-md-4.col-sm-6.col-xs-12
+                  .flexslider.pull-left
+                    .flex-viewport
+                      ul.slides
+                        - var n = 0
+                        while n < 4
+                          li.clone(data-thumb='assets/img/g-1.jpg' aria-hidden='true')
+                            .thumb-image.easyzoom
+                              a(href='assets/img/g-1.jpg' data-lightbox="image-1" data-title="My caption")
+                                img.img-responsive(src='assets/img/g-1.jpg' alt='')
+                          - n++
+                .col-md-8.col-sm-6.col-xs-12
+                  .content.pull-right
+                    p Сдаем в аренду стоматологические кресла в центре Москвы (есть парковка). 1 минута от м. Новослободская. Действующая клиника - 3 стоматологические установки. Есть отдельный кабинет под хирургию. В аренду входит стандартный набор инструментов, радиовизиограф, полимеризационная лампа, ультразвук, стерилизация инструментов после обработки арендатором. Возможно проведение ОПТГ и КТ-снимков за дополнительную плату. Аренда почасовая (700 руб/час) и посменная со скидкой (по предоплате). Мы работаем с 9 до 21 без перерыва и выходных. На все вопросы ответим по телефону и при встрече в клинике.
+                    .price
+                      i.fa.fa-rub
+                      | 700
+                    .contact
+                      i.fa.fa-user
+                      | Администратор
+                    .location
+                      i.fa.fa-globe
+                      | Москва
+                    .phone
+                      i.fa.fa-phone
+                      | 8 999 999 99 99
+              .ads-detail__footer.clearfix
+                hr
+                h2.h2 Смотрите также:
+                br
+                a(href='#0') Аренда кресла, кабинета
+                | →
+                a(href='#0') Сдается в аренду стоматологический кабинет м.Таганская
+                br
+                a(href='#0') Аренда кресла, кабинета
+                | →
+                a(href='#0') Сдается в аренду стоматологический кабинет м.Таганская
+                br
+                a(href='#0') Аренда кресла, кабинета
+                | →
+                a(href='#0') Сдается в аренду стоматологический кабинет м.Таганская
+            .main-widget.main-widget__ads-detail
+              h2.h2.main-widget__title 0 комментариев
+              hr
+              form.form.form__comment
+                textarea.input.textarea
+                button.btn.btn-primary(type='submit') Комментировать
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/main__aside

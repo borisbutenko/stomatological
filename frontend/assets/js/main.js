@@ -51,11 +51,13 @@
         });
 
         /**
-         *  Lab add service list/item
+         *  Flexslider
          */
-        $('.js-lab').on('click', function() {
-            return false;
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
         });
+
     });
 
 })(jQuery);
