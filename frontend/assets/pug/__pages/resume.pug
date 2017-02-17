@@ -35,14 +35,6 @@ block main
                     - var option = 'Рубрика-' + n++
                     option= option
               .col-md-4.col-sm-12.col-xs-12
-                label.label(for='county') Страна
-                select#county.input.select(name='county')
-                  - var n = 1
-                  option(selected) Выберите страну
-                  while n < 10
-                    - var option = 'Страна-' + n++
-                    option= option
-              .col-md-4.col-sm-12.col-xs-12
                 label.label(for='city') Город
                 select#city.input.select(name='city')
                   - var n = 1

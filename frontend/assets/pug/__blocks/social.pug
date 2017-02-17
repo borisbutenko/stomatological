@@ -1,15 +1,9 @@
-- var social = [{url : '#0', cl : 'fa-envelope'}, {url : '#0', cl : 'fa-facebook-official'}, {url : '#0', cl : 'fa-vk'}, {url : '#0', cl : 'fa-odnoklassniki-square'}, {url : '#0', cl : 'fa-instagram'}]
+- var social = [{url : '#0', cl : 'fa-facebook-official'}, {url : '#0', cl : 'fa-vk'}, {url : '#0', cl : 'fa-odnoklassniki-square'}, {url : '#0', cl : 'fa-instagram'}]
 
 ul.social
-  - var n = 1
-  each item in social
-    if ( n == 1)
-      li.social__item
-        a.social__link(href=item.url)
-          i.fa.fa-fw(class=item.cl)
-          span office@dental.com
-    else
-      li.social__item(data-l=social.length)
-        a.social__link(href=item.url)
-          i.fa.fa-fw(class=item.cl)
-    - n++
+  li.social__item
+    a.social__link(href='#0')
+      span office@dental.com
+  li.social__item
+    a.social__link(href='#0')
+      i.fa.fa-fw.fa-facebook-official

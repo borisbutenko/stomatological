@@ -14,7 +14,7 @@ block main
   .container
     .row
       .col-md-9.col-sm-8.col-xs-12
-        section.section.section__add-resume
+        section.section.section__add-vacancy
           .col-md-12.col-sm-12.col-xs-12
             h2.h2.section__title Создание вакансии
             .main-widget.main-widget__user
@@ -26,14 +26,6 @@ block main
                       - var n = 1
                       while n < 10
                         - var month = 'Рубрика-' + n++
-                        option= month
-                .form__group.clearfix
-                  label.label.form__user__label Страна
-                  select.select.input
-                    option(selected) - Выбор -
-                      - var n = 1
-                      while n < 10
-                        - var month = 'Страна-' + n++
                         option= month
                 .form__group.clearfix
                   label.label.form__user__label Город
@@ -65,6 +57,9 @@ block main
                 .form__group.clearfix
                   label.label.form__user__label Зарплата до
                   input.input(type='text' name='name' placeholder='руб.')
+                .form__group.clearfix
+                  label.label.form__user__label Договорная
+                  input.input-checkbox(type='checkbox' name='name')
                 .form__group.clearfix
                   label.label.form__user__label.form__user__label-textarea Должностные инструкции
                   textarea.input.textarea

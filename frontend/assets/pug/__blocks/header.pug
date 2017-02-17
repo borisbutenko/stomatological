@@ -5,14 +5,14 @@ header.header
         .col-md-6.col-sm-6.col-xs-6
           h1.h1.header__title= title
         .col-md-6.col-sm-6.col-xs-6
-          .header__switcher.pull-right
-            a#language-switcher.header__switcher__link.dropdown-toggle(href='#0' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true') RU
-            ul.dropdown-menu(aria-labelledby='language-switcher')
-              a.header__switcher__link(href='#0') EN
-              a.header__switcher__link(href='#0') FR
-              a.header__switcher__link(href='#0') ES
           .header__social.pull-right
             include social
+        //  .header__switcher.pull-right
+        //    a#language-switcher.header__switcher__link.dropdown-toggle(href='#0' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true') RU
+        //    ul.dropdown-menu(aria-labelledby='language-switcher')
+        //      a.header__switcher__link(href='#0') EN
+        //      a.header__switcher__link(href='#0') FR
+        //      a.header__switcher__link(href='#0') ES
         .col-md-6.col-sm-6.col-xs-6
           .header__logo
             a.logo(href='index.html')
@@ -26,7 +26,7 @@ header.header
                   i.fa.fa-sign-in
                   | Вход
               li.actions__item
-                a.actions__link.btn.btn-primary.btn-small.js-reg-modal(href='#0' data-toggle='modal' data-target='#modal-login')
+                a.actions__link.btn.btn-primary.btn-small.js-reg-modal(href='#0' data-toggle='modal' data-target='#modal-reg')
                   i.fa.fa-user
                   | Регистрация
   section.section.section__menu-main

@@ -22,19 +22,19 @@
                 <h1 class="h1 header__title">Вакансия</h1>
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="header__switcher pull-right"><a class="header__switcher__link dropdown-toggle" id="language-switcher" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">RU</a>
-                  <ul class="dropdown-menu" aria-labelledby="language-switcher"><a class="header__switcher__link" href="#0">EN</a><a class="header__switcher__link" href="#0">FR</a><a class="header__switcher__link" href="#0">ES</a></ul>
-                </div>
                 <div class="header__social pull-right">
                   <ul class="social">
-                    <li class="social__item"><a class="social__link" href="#0"><i class="fa fa-fw fa-envelope"></i><span>office@dental.com</span></a></li>
-                    <li class="social__item" data-l="5"><a class="social__link" href="#0"><i class="fa fa-fw fa-facebook-official"></i></a></li>
-                    <li class="social__item" data-l="5"><a class="social__link" href="#0"><i class="fa fa-fw fa-vk"></i></a></li>
-                    <li class="social__item" data-l="5"><a class="social__link" href="#0"><i class="fa fa-fw fa-odnoklassniki-square"></i></a></li>
-                    <li class="social__item" data-l="5"><a class="social__link" href="#0"><i class="fa fa-fw fa-instagram"></i></a></li>
+                    <li class="social__item"><a class="social__link" href="#0"><span>office@dental.com</span></a></li>
+                    <li class="social__item"><a class="social__link" href="#0"><i class="fa fa-fw fa-facebook-official"></i></a></li>
                   </ul>
                 </div>
               </div>
+              <!--  .header__switcher.pull-right-->
+              <!--    a#language-switcher.header__switcher__link.dropdown-toggle(href='#0' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true') RU-->
+              <!--    ul.dropdown-menu(aria-labelledby='language-switcher')-->
+              <!--      a.header__switcher__link(href='#0') EN-->
+              <!--      a.header__switcher__link(href='#0') FR-->
+              <!--      a.header__switcher__link(href='#0') ES-->
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="header__logo"><a class="logo" href="index.html"><span class="logo__name">Клуб стоматологов</span><span class="logo__url">stomatologclub.ru</span></a></div>
               </div>
@@ -42,7 +42,7 @@
                 <div class="header__actions">
                   <ul class="actions">
                     <li class="actions__item"><a class="actions__link btn btn-success btn-small js-login-modal" href="#0" data-toggle="modal" data-target="#modal-login"><i class="fa fa-sign-in"></i>Вход</a></li>
-                    <li class="actions__item"><a class="actions__link btn btn-primary btn-small js-reg-modal" href="#0" data-toggle="modal" data-target="#modal-login"><i class="fa fa-user"></i>Регистрация</a></li>
+                    <li class="actions__item"><a class="actions__link btn btn-primary btn-small js-reg-modal" href="#0" data-toggle="modal" data-target="#modal-reg"><i class="fa fa-user"></i>Регистрация</a></li>
                   </ul>
                 </div>
               </div>
@@ -59,6 +59,8 @@
                 <div class="collapse navbar-collapse" id="menu-main">
                   <ul class="nav navbar-nav menu-main__list">
                     <li class="menu-main__item"><a class="menu-main__link" href="index.html">главная</a></li>
+                    <li class="menu-main__item-divider-vertical"></li>
+                    <li class="menu-main__item"><a class="menu-main__link" href="#0">статьи</a></li>
                     <li class="menu-main__item-divider-vertical"></li>
                     <li class="menu-main__item"><a class="menu-main__link" href="job.html">работа</a></li>
                     <li class="menu-main__item-divider-vertical"></li>
@@ -383,6 +385,10 @@
                   </div>
                 </div>
               </div>
+              <div class="clearfix">
+                <h4 class="modal-title text-center">Войти через</h4>
+                <hr><a class="registration__fb registration__with" href="#0"><i class="fa fa-facebook"></i></a><a class="registration__gl registration__with" href="#0"><i class="fa fa-google"></i></a><a class="registration__in registration__with" href="#0"><i class="fa fa-linkedin"></i></a>
+              </div>
             </div>
             <div class="modal-footer"><a class="btn btn-default" href="#0" data-dismiss="modal">Отмена</a><a class="btn btn-primary" href="#0" data-dismiss="modal">Регистрация</a></div>
           </form>
@@ -390,7 +396,6 @@
       </div>
     </div>
     <div class="social-fixed">
-      <div class="social-fixed__vk"><a href="#0">Мы в ВКонтакте<i class="fa fa-vk"></i></a></div>
       <div class="social-fixed__fb"><a href="#0">Мы в Facebook<i class="fa fa-facebook"></i></a></div>
     </div>
   </body>

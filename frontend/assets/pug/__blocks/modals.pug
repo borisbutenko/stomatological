@@ -58,6 +58,15 @@
               .col-md-12
                 label.label(for='password-reg-re') Повторите пароль:
                 input#password-reg-re.input(type='password' name='password' required)
+          .clearfix
+            h4.modal-title.text-center Войти через
+            hr
+            a.registration__fb.registration__with(href='#0')
+              i.fa.fa-facebook
+            a.registration__gl.registration__with(href='#0')
+              i.fa.fa-google
+            a.registration__in.registration__with(href='#0')
+              i.fa.fa-linkedin
         .modal-footer
           a.btn.btn-default(href='#0' data-dismiss='modal') Отмена
           a.btn.btn-primary(href='#0' data-dismiss='modal') Регистрация

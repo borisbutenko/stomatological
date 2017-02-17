@@ -122,6 +122,9 @@
     top: 0 !important;
     margin-bottom: 2rem !important;
   }
+  .section__add-vacancy input[type=checkbox].input-checkbox {
+    float: left !important;
+  }
 }
 @media (max-width: 500px) {
   .section__user .main-widget {
@@ -10247,7 +10250,7 @@ img {
   max-width: 100%;
 }
 .wrapper {
-  background: #fff;
+  background: #f7f7f9;
 }
 .section__header {
   padding: 2rem 0;
@@ -10465,6 +10468,21 @@ ul.pagination a.last > i {
   margin-left: 0.5rem;
 }
 .lab-service-item {
+  margin-bottom: 3rem;
+}
+.banner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.banner__content {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 20rem;
+  text-align: center;
+  font-size: 3rem;
+  background: #f0f8ff;
   margin-bottom: 3rem;
 }
 .logo {
@@ -10879,6 +10897,34 @@ ul.pagination a.last > i {
   color: #afbcc5;
   font-size: 1.2rem;
 }
+#modal-reg .registration__with {
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 2.8rem;
+  line-height: 4.3rem;
+  min-width: 0;
+  box-sizing: border-box;
+}
+#modal-reg .registration__with:hover {
+  opacity: 0.9;
+}
+#modal-reg .registration__fb {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  margin-left: 0;
+}
+#modal-reg .registration__gl {
+  background-color: #dd4b39;
+  border-color: #dd4b39;
+}
+#modal-reg .registration__in {
+  background-color: #1b86bc;
+  border-color: #1b86bc;
+}
 .vacancy__row {
   margin-bottom: 1rem;
 }
@@ -10963,6 +11009,10 @@ ul.pagination a.last > i {
 .ads-result__title {
   font-size: 1.8rem;
 }
+.ads-result__item {
+  padding: 3rem 4rem;
+  border-bottom: 0.1rem solid rgba(128,128,128,0.5);
+}
 .ads-result__item:nth-child(-n + 5) {
   background: transparent;
 }
@@ -10988,6 +11038,12 @@ ul.pagination a.last > i {
   position: relative;
   top: 4rem;
   clear: both;
+}
+.ads-container {
+  padding: 0;
+}
+.ads-result__ev {
+  background: #f0f8ff !important;
 }
 .thumbnails {
   margin-bottom: 0;
@@ -11058,7 +11114,7 @@ ul.pagination a.last > i {
   padding: 0;
 }
 .header {
-  background-color: #f1f8f9;
+  background-color: #233a46;
 }
 .header__switcher {
   position: relative;
