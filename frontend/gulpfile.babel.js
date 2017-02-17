@@ -9,7 +9,7 @@ import autoprefixer from 'gulp-autoprefixer';
 import csso         from 'gulp-csso';
 import concat       from 'gulp-concat';
 import notify       from 'gulp-notify';
-import imagemin     from 'gulp-imagemin';
+// import imagemin     from 'gulp-imagemin';
 import rename       from 'gulp-rename';
 import uglify       from 'gulp-uglify';
 import htmlmin      from 'gulp-htmlmin';
@@ -122,19 +122,19 @@ const imgPath = {
     to   : `${dirs.to}img/`
 };
 
-gulp.task('imagemin', () => {
-    del([cleanPath.img], {force: true});
-
-return gulp.src(imgPath.from)
-    .pipe(imagemin({
-        plugins: [
-            imagemin.svgo({})
-        ],
-        progressive: true,
-        interlaced: true
-    }))
-    .pipe(gulp.dest(imgPath.to))
-});
+// gulp.task('imagemin', () => {
+//     del([cleanPath.img], {force: true});
+//
+// return gulp.src(imgPath.from)
+//     .pipe(imagemin({
+//         plugins: [
+//             imagemin.svgo({})
+//         ],
+//         progressive: true,
+//         interlaced: true
+//     }))
+//     .pipe(gulp.dest(imgPath.to))
+// });
 
 /**
  * Build libs
