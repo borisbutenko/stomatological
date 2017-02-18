@@ -1,0 +1,68 @@
+extends ../base
+block vars
+  - var title = 'Новости и статьи по стоматологии'
+block main
+  - var submenu = [{name : 'Правила', url : 'rules.html', parent : 'ads.html'}]
+  include ../__blocks/menu__main-sub
+  +breadcrumbs([
+      {
+          name: 'Главная',
+          url: 'index.html'
+      },
+      {
+          name: 'Новости и статьи по стоматологии',
+          url: null
+      }])
+  .container
+    .row
+      .col-md-9.col-sm-8.col-xs-12
+        section.section.section__article
+          h2.h2.section__title Новости и статьи по стоматологии
+          - var n = 0
+          while n < 5
+            .main-widget.article
+              article.clearfix
+                h2.h2.main-widget__title
+                  a(href='#0') По числу выпавших зубов можно судить о продолжительности жизни человека
+                a.article__name(href='#0')
+                  i.fa.fa-folder-open
+                  | Стоматология
+                p.article__desc По мнению ученых, если к 74 годам вы сохранили полный набор зубов, то вероятно вы проживете до 100 лет. Число выпавших зубов может выступать в качестве показателя того, как человек следит за собственным здоровьем. Результаты исследования говорят: выпадение зубов тесно связано с перенесенным стрессом. Под стрессом подразумеваются не только социальные, эмоциональные, экономические, рабочие потрясения, но также хронические и наследственные заболевания, вредные привычки.
+                p
+                  img(src='assets/img/article-1.jpeg' alt='')
+                .more-links.clearfix
+                  a.pull-left(href='#0')
+                    i.fa.fa-level-up
+                    | Читать дальше
+                  a.pull-left(href='#0')
+                    i.fa.fa-comment
+                    | комментарии
+                  span.pull-right
+                    i.fa.fa-clock-o
+                    | 1 февраля 2017
+                hr
+                .tag-links
+                  i.fa.fa-tags
+                  a(href='#0') исследование
+                  a(href='#0') выпадение зубов
+                  a(href='#0') продолжительность жизни
+            - n++
+          ul.pagination
+            li
+              a.first(href='#0')
+                i.fa.fa-angle-left
+            li
+              a.active 1
+            li
+              a(href='#0') 2
+            li
+              a(href='#0') 3
+            li
+              a(href='#0') 4
+            li
+              a(href='#0') 5
+            li
+              a.last(href='#0')
+                i.fa.fa-angle-right
+      .col-md-3.col-sm-4.col-xs-12
+        include ../__blocks/rubric__aside
