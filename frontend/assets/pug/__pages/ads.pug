@@ -52,27 +52,50 @@ block main
               - var n = 0
               ul.ads-result.clearfix
                 while n < 10
-                  li.ads-result__item.clearfix
-                    .ads-result__row.clearfix
-                      .col-md-2.col-sm-4.col-xs-12
-                        a.ads-result__image(href='#0')
-                          img(src='assets/img/g-1.jpg' alt='')
-                      .col-md-7.col-sm-8.col-xs-12
-                        h2.h2.ads-result__title
-                          a(href='#0') Ортопантомограф Sirona Orthophos xg3
-                        a.ads-result__link.text-italic(href='#0')
-                          i.fa.fa-folder-open
-                          | Аренда кресла, кабинета
-                        p.ads-result__location
-                          i.fa.fa-globe
-                          | Москва
-                      .col-md-3.col-sm-12.col-xs-12
-                        p.ads-result__price.pull-right
-                          | 30 000
-                          i.fa.fa-rub
-                        p.ads-result__date.pull-right
-                          i.fa.fa-clock-o
-                          | 9 января 2017
+                  if n < 3
+                    li.ads-result__item.clearfix.ads-result__ev
+                      .ads-result__row.clearfix
+                        .col-md-2.col-sm-4.col-xs-12
+                          a.ads-result__image(href='#0')
+                            img(src='assets/img/g-1.jpg' alt='')
+                        .col-md-7.col-sm-8.col-xs-12
+                          h2.h2.ads-result__title
+                            a(href='#0') Ортопантомограф Sirona Orthophos xg3
+                          a.ads-result__link.text-italic(href='#0')
+                            i.fa.fa-folder-open
+                            | Аренда кресла, кабинета
+                          p.ads-result__location
+                            i.fa.fa-globe
+                            | Москва
+                        .col-md-3.col-sm-12.col-xs-12
+                          p.ads-result__price.pull-right
+                            | 30 000
+                            i.fa.fa-rub
+                          p.ads-result__date.pull-right
+                            i.fa.fa-clock-o
+                            | 9 января 2017
+                  else
+                    li.ads-result__item.clearfix
+                      .ads-result__row.clearfix
+                        .col-md-2.col-sm-4.col-xs-12
+                          a.ads-result__image(href='#0')
+                            img(src='assets/img/g-1.jpg' alt='')
+                        .col-md-7.col-sm-8.col-xs-12
+                          h2.h2.ads-result__title
+                            a(href='#0') Ортопантомограф Sirona Orthophos xg3
+                          a.ads-result__link.text-italic(href='#0')
+                            i.fa.fa-folder-open
+                            | Аренда кресла, кабинета
+                          p.ads-result__location
+                            i.fa.fa-globe
+                            | Москва
+                        .col-md-3.col-sm-12.col-xs-12
+                          p.ads-result__price.pull-right
+                            | 30 000
+                            i.fa.fa-rub
+                          p.ads-result__date.pull-right
+                            i.fa.fa-clock-o
+                            | 9 января 2017
                   - n++
             ul.pagination
               li
