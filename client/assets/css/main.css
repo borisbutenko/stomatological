@@ -10517,10 +10517,6 @@ ul.pagination a.last > i {
 }
 .logo {
   display: inline-block;
-  width: 8rem;
-  height: 6rem;
-  background: url("../img/logo.png") no-repeat 50%;
-  background-size: 200%;
 }
 .logo__name {
   font-size: 1.8rem;
@@ -11148,6 +11144,9 @@ ul.pagination a.last > i {
 .header {
   background-color: #233a46;
 }
+.header__logo {
+  width: 30%;
+}
 .header__switcher {
   position: relative;
   top: -0.5rem;
@@ -11184,6 +11183,10 @@ ul.pagination a.last > i {
   background: rgba(62,145,173,0.2);
 }
 .header__title {
+  width: 65%;
+  display: inline-block;
+  line-height: 1.6rem;
+  margin-left: 5% !important;
   padding-bottom: 1.5rem;
   font-size: 1.1rem;
   color: #aaa;

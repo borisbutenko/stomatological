@@ -2,8 +2,11 @@ header.header
   section.section.section__header
     .container
       .row
-        .col-md-6.col-sm-6.col-xs-6
-          h1.h1.header__title= title
+        .col-md-6.col-sm-6.col-xs-6.clearfix
+          .header__logo.pull-left
+            a(href='index.html')
+              img.logo(src='assets/img/logo.png' alt='')
+          h1.h1.header__title.pull-left= title
         .col-md-6.col-sm-6.col-xs-6
           .header__social.pull-right
             include social
@@ -13,12 +16,6 @@ header.header
               a.header__switcher__link(href='#0') EN
               a.header__switcher__link(href='#0') FR
               a.header__switcher__link(href='#0') ES
-        .col-md-6.col-sm-6.col-xs-6
-          .header__logo
-            a(href='index.html')
-              .logo
-              span.logo__name Клуб стоматологов
-              span.logo__url stomatologclub.ru
         .col-md-6.col-sm-6.col-xs-6
           .header__actions
             ul.actions
